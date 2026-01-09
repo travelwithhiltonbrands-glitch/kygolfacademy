@@ -198,7 +198,11 @@
             max-width: 220px;
           }
         
-
+          .lessons-grid{
+          grid-template-columns: 1fr;
+          gap: 18px;
+        }
+      }
       
         .about-photo{
           max-width: 220px;   /* keeps photo nice size */
@@ -234,6 +238,40 @@
       padding-top: 60px;
       padding-bottom: 60px;
     }
+
+    /* 3-column lessons layout */
+    .lessons-grid{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    
+    .lesson-col{
+      padding: 0;
+    }
+    
+    .lesson-col h3{
+      margin: 0 0 12px;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: .2px;
+    }
+    
+    .lesson-col p{
+      margin: 0 0 10px;
+      font-size: 16px;
+      opacity: .9;
+    }
+    
+    .lesson-link{
+      color: #f6f6f4;
+      text-decoration: underline;
+    }
+
   </style>
 </head>
 
@@ -293,13 +331,31 @@
 </section>
 
   <section id="lessons">
-    <div class="card">
-      <p><strong>Private Lesson</strong> — 60 minutes</p>
-      <p><strong>Short Game</strong> — 45 minutes</p>
-      <p><strong>On-Course Coaching</strong> — 9 holes</p>
-    </div>
-  </section>
+      <div class="lessons-grid">
+    
+        <div class="lesson-col">
+          <h3>In-Person</h3>
+          <p>Private Lessons</p>
+          <p>Semi-Private Lessons</p>
+        </div>
+    
+        <div class="lesson-col">
+          <h3>Virtual Lessons</h3>
+          <p>Online swing review</p>
+          <p>Live Zoom lesson</p>
+        </div>
+    
+        <div class="lesson-col">
+          <h3>Group Lesson Schedule</h3>
+          <p>Weekly clinics &amp; juniors</p>
+          <p><a class="lesson-link" href="#contact">Request the schedule</a></p>
+        </div>
+    
+      </div>
+    </section>
 
+
+  
   <section id="contact">
     <h2>Contact</h2>
     <div class="card">
@@ -312,6 +368,7 @@
 
 </body>
 </html>
+
 
 
 
