@@ -29,16 +29,27 @@
         
         /* TRUE left edge */
         .tagline-left{
-          position: absolute;
-          left: 20px;
-          top: 18px;
-          font-size: 34px;
-          font-weight: 700;
-          letter-spacing: .3px;
-          white-space: nowrap;
-          opacity: .9;
-        }
-        
+            position: absolute;
+            left: 20px;
+            top: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+          }
+          .tagline-text{
+            font-size: 34px;
+            font-weight: 700;
+            letter-spacing: .4px;
+            line-height: 1.1;
+            white-space: nowrap;
+          }
+          
+          .header-btn{
+            margin-top: 0;
+            padding: 8px 14px;
+            font-size: 14px;
+          }
         /* Centered content */
         .header-inner{
           max-width: 1200px;
@@ -115,8 +126,9 @@
 <body>
       <header class="site-header">
         <div class="tagline-left">
-          Better golf with simple coaching.
+          <div class="tagline-text">Better golf with simple coaching.</div>
         </div>
+
       
         <div class="header-inner">
           <div class="brand">
@@ -175,6 +187,7 @@
 
 </body>
 </html>
+
 
 
 
