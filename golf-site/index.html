@@ -140,6 +140,18 @@
       opacity: .92;
       margin-bottom: 16px;
     }
+    /* Make ONLY the About section full width */
+    #about{
+      max-width: none;      /* removes the 900px limit */
+      padding-left: 0;
+      padding-right: 0;
+    }
+    
+    #about .about-layout{
+      max-width: 1400px;    /* controls readable width */
+      margin: 0 auto;
+      padding: 60px 40px;   /* space inside the section */
+    }
 
 </style>
 
@@ -218,6 +230,7 @@
       <p>Booking link: <a href="https://calendly.com/" target="_blank" style="color:#f6f6f4;">Calendly</a></p>
     </div>
   </section>
+
 
 </body>
 </html>
