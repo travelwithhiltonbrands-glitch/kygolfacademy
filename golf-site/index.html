@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name | Golf Lessons</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background:#0b0f0c; color:#f6f6f4; }
+    header { padding:16px 20px; position:sticky; top:0; background:rgba(11,15,12,.85); backdrop-filter: blur(8px); }
+    nav a { color:#f6f6f4; margin-right:12px; text-decoration:none; }
+    nav a:hover { text-decoration:underline; }
+
+    .hero { position:relative; height:70vh; overflow:hidden; border-bottom:1px solid rgba(255,255,255,.15); }
+    .hero video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+    .overlay { position:absolute; inset:0; background:rgba(0,0,0,.55); }
+    .hero-text { position:relative; padding:70px 20px; max-width:900px; }
+
+    section { padding:40px 20px; max-width:900px; margin:0 auto; }
+    .card { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.15); border-radius:14px; padding:18px; margin-top:14px; }
+    .btn { display:inline-block; margin-top:10px; padding:10px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.2); color:#f6f6f4; text-decoration:none; }
+    .btn:hover { opacity:.9; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <strong>Your Name • Golf Instruction</strong>
+    <nav style="margin-top:10px;">
+      <a href="#about">About</a>
+      <a href="#lessons">Lessons</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <video autoplay muted loop playsinline preload="auto" poster="poster.jpg">
+      <source src="swing.mp4" type="video/mp4" />
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h1 style="margin:0 0 10px;">Better golf with simple coaching.</h1>
+      <p style="margin:0; max-width:60ch; opacity:.85;">
+        Private lessons • Juniors • Short game • On-course coaching
+      </p>
+      <a class="btn" href="#contact">Book a Lesson</a>
+    </div>
+  </div>
+
+  <section id="about">
+    <h2>About</h2>
+    <div class="card">
+      <p>Write 3–6 sentences about who you coach, where you teach, and what you focus on.</p>
+      <p>Example: “I help golfers build a repeatable swing with clear feels and a practice plan.”</p>
+    </div>
+  </section>
+
+  <section id="lessons">
+    <h2>Lessons</h2>
+    <div class="card">
+      <p><strong>Private Lesson</strong> — 60 minutes</p>
+      <p><strong>Short Game</strong> — 45 minutes</p>
+      <p><strong>On-Course Coaching</strong> — 9 holes</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:you@email.com" style="color:#f6f6f4;">you@email.com</a></p>
+      <p>Phone: (555) 555-5555</p>
+      <p>Booking link: <a href="https://calendly.com/" target="_blank" style="color:#f6f6f4;">Calendly</a></p>
+    </div>
+  </section>
+
+</body>
+</html>
