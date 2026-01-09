@@ -167,7 +167,61 @@
       margin: 0 auto;
       padding: 60px 40px;   /* space inside the section */
     }
-  
+       /* --- Mobile fixes --- */
+        @media (max-width: 768px){
+        
+          /* Give the header enough vertical room */
+          .site-header{
+            min-height: 150px;
+          }
+        
+          /* Hide the big left tagline + button on mobile (it’s what causes crowding) */
+          .tagline-left{
+            display: none;
+          }
+        
+          /* Put the nav back into normal flow and center it */
+          .main-nav{
+            position: static !important;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 10px;
+          }
+        
+          /* Slightly smaller nav text */
+          .main-nav a{
+            font-size: 13px;
+          }
+        
+          /* Make logo a bit smaller on mobile */
+          .brand img{
+            height: 56px;
+          }
+        
+          /* Tighten header padding */
+          .header-inner{
+            padding: 16px 16px 14px;
+          }
+        }
+
+          @media (max-width: 768px){
+        .about-layout{
+          grid-template-columns: 1fr;
+          gap: 18px;
+          padding: 28px 16px;
+        }
+      
+        .about-photo{
+          max-width: 220px;   /* keeps photo nice size */
+        }
+      
+        .about-photo img{
+          width: 100%;
+        }
+      }
+
+ 
   </style>
 </head>
 
@@ -247,6 +301,7 @@
 
 </body>
 </html>
+
 
 
 
