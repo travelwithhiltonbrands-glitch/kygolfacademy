@@ -6,9 +6,44 @@
   <title>Your Name | Golf Lessons</title>
   <style>
     body { margin:0; font-family: Arial, sans-serif; background:#0b0f0c; color:#f6f6f4; }
-    header { padding:16px 20px; position:sticky; top:0; background:rgba(11,15,12,.85); backdrop-filter: blur(8px); }
-    nav a { color:#f6f6f4; margin-right:12px; text-decoration:none; }
-    nav a:hover { text-decoration:underline; }
+    .site-header{
+  position: sticky;
+  top: 0;
+  background: rgba(11,15,12,.85);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+}
+
+.header-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand img{
+  height: 48px;      /* change this to resize logo */
+  width: auto;
+  margin-bottom: 8px;
+}
+
+.main-nav{
+  display: flex;
+  gap: 24px;
+}
+
+.main-nav a{
+  color: #f6f6f4;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: .6px;
+}
+
+.main-nav a:hover{
+  text-decoration: underline;
+}
 
     .hero { position:relative; height:85vh; min-height:600px; overflow:hidden; background:#000; }
 
@@ -37,6 +72,10 @@
       max-width:900px;
       z-index:2;
     }
+      .hero-text h1, .hero-text p{
+    text-shadow: 0 2px 10px rgba(0,0,0,.35);
+  }
+
       
     section { padding:40px 20px; max-width:900px; margin:0 auto; }
     .card { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.15); border-radius:14px; padding:18px; margin-top:14px; }
@@ -46,14 +85,19 @@
 </head>
 
 <body>
-  <header>
-    <strong>Your Name • Golf Instruction</strong>
-    <nav style="margin-top:10px;">
-      <a href="#about">About</a>
-      <a href="#lessons">Lessons</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand">
+          <img src="logo.png" alt="Kevin Yoon Golf" />
+        </div>
+    
+        <nav class="main-nav">
+          <a href="#about">About</a>
+          <a href="#lessons">Lessons</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
 
   <div class="hero">
     <video autoplay muted loop playsinline preload="auto" poster="poster.jpg">
@@ -97,6 +141,7 @@
 
 </body>
 </html>
+
 
 
 
