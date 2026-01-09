@@ -10,24 +10,17 @@
         align-items: center;
         gap: 16px;
       }
-      
-      .tagline{
-        font-size: 18px;
-        font-weight: 600;
-        letter-spacing: .3px;
-        white-space: nowrap;
-      }
     
     body { margin:0; font-family: Arial, sans-serif; background:#0b0f0c; color:#f6f6f4; }
-       .site-header{
+        .site-header{
           position: sticky;
-         
           top: 0;
+          left: 0;
+          right: 0;
           background: rgba(11,15,12,.85);
           backdrop-filter: blur(8px);
           z-index: 10;
-        }
-        
+        }      
         /* TRUE left edge */
         .tagline-left{
             position: absolute;
@@ -155,10 +148,11 @@
       <source src="swing.mp4" type="video/mp4" />
     </video>
     <div class="overlay"></div>
-    <div class="hero-text">
-  </div>
+    <div class="hero-text"></div>
+    </div> <!-- ✅ THIS closes .hero -->
+    
+    <section id="about">
 
-  <section id="about">
     <h2>About</h2>
     <div class="card">
       <p>Write 3–6 sentences about who you coach, where you teach, and what you focus on.</p>
@@ -186,6 +180,7 @@
 
 </body>
 </html>
+
 
 
 
