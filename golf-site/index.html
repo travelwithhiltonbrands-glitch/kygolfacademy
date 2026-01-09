@@ -188,54 +188,53 @@
       padding: 60px 40px;   /* space inside the section */
     }
        /* --- Mobile fixes --- */
-        /* --- Mobile fixes --- */
-  @media (max-width: 768px){
-    .site-header{ min-height: 150px; }
-    .tagline-left{ display: none; }
 
-    .lessons-intro{
-        padding-left: 20px;
-      font-size: 22px;
-      margin-bottom: 24px;
-    }
-  }
+ /* --- Mobile fixes --- */
+    @media (max-width: 768px){
+      .site-header{ min-height: 150px; }
+      .tagline-left{ display: none; }
     
-    .main-nav{
-      position: static;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 10px;
+      .main-nav{
+        position: static;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 10px;
+      }
+    
+      .main-nav a{ font-size: 13px; }
+      .brand img{ height: 56px; }
+      .header-inner{ padding: 16px 16px 14px; }
+    
+      .about-layout{
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 28px 16px;
+      }
+    
+      .about-photo{
+        max-width: 220px;
+        margin: 0 auto;
+        text-align: center;
+      }
+    
+      .about-btn{
+        width: 100%;
+        max-width: 220px;
+      }
+    
+      .lessons-intro{
+        padding-left: 20px;
+        font-size: 22px;
+        margin-bottom: 24px;
+      }
+    
+      .lessons-grid{
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 0 20px;
+      }
     }
-  
-    .main-nav a{ font-size: 13px; }
-    .brand img{ height: 56px; }
-    .header-inner{ padding: 16px 16px 14px; }
-  
-    .about-layout{
-      grid-template-columns: 1fr;
-      gap: 18px;
-      padding: 28px 16px;
-    }
-  
-    .about-photo{
-      max-width: 220px;
-      margin: 0 auto;
-      text-align: center;
-    }
-  
-    .about-btn{
-      width: 100%;
-      max-width: 220px;
-    }
-  
-    .lessons-grid{
-      grid-template-columns: 1fr;
-      gap: 18px;
-      padding: 0 20px;
-    }
-  }
-
     
      #lessons{
       background: #000;          /* pitch black */
@@ -308,20 +307,19 @@
 </head>
 
 <body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="logo.png" alt="Kevin Yoon Golf" />
+      </div>
 
-        <div class="header-inner">
-          <div class="brand">
-            <img src="logo.png" alt="Kevin Yoon Golf" />
-          </div>
-      
-          <nav class="main-nav">
-            <a href="#about">About</a>
-            <a href="#lessons">Lessons</a>
-            <a href="#contact">Contact</a>
-          </nav>
-        </div>
-      </header>
-
+      <nav class="main-nav">
+        <a href="#about">About</a>
+        <a href="#lessons">Lessons</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
 
   <div class="hero">
@@ -401,6 +399,7 @@
 
 </body>
 </html>
+
 
 
 
