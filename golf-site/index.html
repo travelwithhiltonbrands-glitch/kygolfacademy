@@ -169,7 +169,12 @@
     }
        /* --- Mobile fixes --- */
         @media (max-width: 768px){
-        
+
+          .about-btn{
+            width: 100%;
+            max-width: 220px;
+          }
+        }
           /* Give the header enough vertical room */
           .site-header{
             min-height: 150px;
@@ -214,6 +219,7 @@
       
         .about-photo{
           max-width: 220px;   /* keeps photo nice size */
+          text-align: center;
         }
       
         .about-photo img{
@@ -229,8 +235,8 @@
       <header class="site-header">
         <div class="tagline-left">
           <div class="tagline-text">Better golf with simple coaching.</div>
-          <a class="btn header-btn" href="#contact">Book a Lesson</a>
         </div>
+
       
         <div class="header-inner">
           <div class="brand">
@@ -257,10 +263,18 @@
     
     <section id="about">
   <div class="about-layout">
-
+    
     <div class="about-photo">
       <img src="profile.jpg" alt="Kevin Yoon" />
+      <a class="btn about-btn" href="#contact">Book a Lesson</a>
     </div>
+    .about-btn{
+        display: inline-block;
+        margin-top: 14px;
+        padding: 12px 18px;
+        font-size: 14px;
+        text-align: center;
+      }
 
     <div class="about-text">
       <p>I grew up in Blacksburg, Virginia, a small college town in the Blue Ridge Mountains. No one in my family played golf, so my chances of getting into the game were slim. There was, however, a local nine-hole college course where I largely taught myself how to play until the age of 17.</p>
@@ -301,6 +315,7 @@
 
 </body>
 </html>
+
 
 
 
