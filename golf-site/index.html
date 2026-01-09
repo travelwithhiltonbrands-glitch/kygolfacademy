@@ -12,8 +12,12 @@
 
     .hero { position:relative; height:85vh; min-height: 600px; overflow:hidden; }
     .hero video{
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
-        object-position: 50% 100% !important;
+        object-position: center bottom;
       }
     .overlay { position:absolute; inset:0; background:rgba(0,0,0,.55); }
     .hero-text { position:relative; padding:70px 20px; max-width:900px; }
@@ -77,6 +81,7 @@
 
 </body>
 </html>
+
 
 
 
