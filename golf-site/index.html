@@ -100,6 +100,7 @@
     }
     
     .overlay{
+      display: none;
       position:absolute;
       inset:0;
       background:rgba(0,0,0,.25);
@@ -169,16 +170,39 @@
     }
        /* --- Mobile fixes --- */
         @media (max-width: 768px){
-
+          .site-header{ min-height: 150px; }
+          .tagline-left{ display: none; }
+        
+          .main-nav{
+            position: static !important;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 10px;
+          }
+        
+          .main-nav a{ font-size: 13px; }
+          .brand img{ height: 56px; }
+          .header-inner{ padding: 16px 16px 14px; }
+        
+          .about-layout{
+            grid-template-columns: 1fr;
+            gap: 18px;
+            padding: 28px 16px;
+          }
+        
+          .about-photo{
+            max-width: 220px;
+            margin: 0 auto;
+            text-align: center;
+          }
+        
           .about-btn{
             width: 100%;
             max-width: 220px;
           }
         }
-          /* Give the header enough vertical room */
-          .site-header{
-            min-height: 150px;
-          }
+
         
           /* Hide the big left tagline + button on mobile (it’s what causes crowding) */
           .tagline-left{
@@ -226,7 +250,14 @@
           width: 100%;
         }
       }
-
+    
+      .about-btn{
+      display: inline-block;
+      margin-top: 14px;
+      padding: 12px 18px;
+      font-size: 14px;
+      text-align: center;
+    }
  
   </style>
 </head>
@@ -268,13 +299,6 @@
       <img src="profile.jpg" alt="Kevin Yoon" />
       <a class="btn about-btn" href="#contact">Book a Lesson</a>
     </div>
-    .about-btn{
-        display: inline-block;
-        margin-top: 14px;
-        padding: 12px 18px;
-        font-size: 14px;
-        text-align: center;
-      }
 
     <div class="about-text">
       <p>I grew up in Blacksburg, Virginia, a small college town in the Blue Ridge Mountains. No one in my family played golf, so my chances of getting into the game were slim. There was, however, a local nine-hole college course where I largely taught myself how to play until the age of 17.</p>
@@ -315,6 +339,7 @@
 
 </body>
 </html>
+
 
 
 
