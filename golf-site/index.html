@@ -19,44 +19,63 @@
       }
     
     body { margin:0; font-family: Arial, sans-serif; background:#0b0f0c; color:#f6f6f4; }
-    .site-header{
-  position: sticky;
-  top: 0;
-  background: rgba(11,15,12,.85);
-  backdrop-filter: blur(8px);
-  z-index: 10;
-}
-
-.header-inner{
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 14px 20px 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.brand img{
-  height: 98px;      /* change this to resize logo */
-  width: auto;
-  margin-bottom: 8px;
-}
-
-.main-nav{
-  display: flex;
-  gap: 24px;
-}
-
-.main-nav a{
-  color: #f6f6f4;
-  text-decoration: none;
-  font-size: 14px;
-  letter-spacing: .6px;
-}
-
-.main-nav a:hover{
-  text-decoration: underline;
-}
+        .site-header{
+      position: sticky;
+      top: 0;
+      background: rgba(11,15,12,.85);
+      backdrop-filter: blur(8px);
+      z-index: 10;
+    }
+    
+    .header-inner{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 20px 10px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      grid-template-rows: auto auto;
+      align-items: center;
+    }
+    
+    .tagline-left{
+      grid-column: 1;
+      grid-row: 1;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: .3px;
+      justify-self: start;
+      white-space: nowrap;
+    }
+    
+    .brand{
+      grid-column: 2;
+      grid-row: 1;
+    }
+    
+    .brand img{
+      height: 72px;   /* logo size */
+      width: auto;
+    }
+    
+    .main-nav{
+      grid-column: 2;
+      grid-row: 2;
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      margin-top: 6px;
+    }
+    
+    .main-nav a{
+      color: #f6f6f4;
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: .6px;
+    }
+    
+    .main-nav a:hover{
+      text-decoration: underline;
+    }
 
     .hero { position:relative; height:85vh; min-height:600px; overflow:hidden; background:#000; }
 
@@ -100,9 +119,13 @@
 <body>
     <header class="site-header">
       <div class="header-inner">
+    
+        <div class="tagline-left">
+          Better golf with simple coaching.
+        </div>
+    
         <div class="brand">
           <img src="logo.png" alt="Kevin Yoon Golf" />
-          <span class="tagline">Better golf with simple coaching.</span>
         </div>
     
         <nav class="main-nav">
@@ -110,8 +133,10 @@
           <a href="#lessons">Lessons</a>
           <a href="#contact">Contact</a>
         </nav>
+    
       </div>
     </header>
+
 
   <div class="hero">
     <video autoplay muted loop playsinline preload="auto" poster="poster.jpg">
@@ -155,6 +180,7 @@
 
 </body>
 </html>
+
 
 
 
