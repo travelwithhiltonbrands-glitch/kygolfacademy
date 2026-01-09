@@ -174,7 +174,7 @@
           .tagline-left{ display: none; }
         
           .main-nav{
-            position: static !important;
+            position: static;
             justify-content: center;
             flex-wrap: wrap;
             gap: 16px;
@@ -203,43 +203,6 @@
           }
         }
 
-        
-          /* Hide the big left tagline + button on mobile (it’s what causes crowding) */
-          .tagline-left{
-            display: none;
-          }
-        
-          /* Put the nav back into normal flow and center it */
-          .main-nav{
-            position: static !important;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 16px;
-            margin-top: 10px;
-          }
-        
-          /* Slightly smaller nav text */
-          .main-nav a{
-            font-size: 13px;
-          }
-        
-          /* Make logo a bit smaller on mobile */
-          .brand img{
-            height: 56px;
-          }
-        
-          /* Tighten header padding */
-          .header-inner{
-            padding: 16px 16px 14px;
-          }
-        }
-
-          @media (max-width: 768px){
-        .about-layout{
-          grid-template-columns: 1fr;
-          gap: 18px;
-          padding: 28px 16px;
-        }
       
         .about-photo{
           max-width: 220px;   /* keeps photo nice size */
@@ -339,6 +302,7 @@
 
 </body>
 </html>
+
 
 
 
