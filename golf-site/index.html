@@ -192,7 +192,14 @@
   @media (max-width: 768px){
     .site-header{ min-height: 150px; }
     .tagline-left{ display: none; }
-  
+
+    .lessons-intro{
+        padding-left: 20px;
+      font-size: 22px;
+      margin-bottom: 24px;
+    }
+  }
+    
     .main-nav{
       position: static;
       justify-content: center;
@@ -288,16 +295,20 @@
       text-decoration: underline;
     }
 
+    .lessons-intro{
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: .4px;
+      margin-bottom: 40px;
+      padding-left: 60px;   /* aligns with grid */
+    }
+
+
   </style>
 </head>
 
 <body>
-      <header class="site-header">
-        <div class="tagline-left">
-          <div class="tagline-text">Better golf with simple coaching.</div>
-        </div>
 
-      
         <div class="header-inner">
           <div class="brand">
             <img src="logo.png" alt="Kevin Yoon Golf" />
@@ -346,29 +357,35 @@
   </div>
 </section>
 
-  <section id="lessons">
-      <div class="lessons-grid">
-    
-        <div class="lesson-col">
-          <h3>In-Person</h3>
-          <p>Private Lessons</p>
-          <p>Semi-Private Lessons</p>
-        </div>
-    
-        <div class="lesson-col">
-          <h3>Virtual Lessons</h3>
-          <p>Online swing review</p>
-          <p>Live Zoom lesson</p>
-        </div>
-    
-        <div class="lesson-col">
-          <h3>Group Lesson Schedule</h3>
-          <p>Weekly clinics &amp; juniors</p>
-          <p><a class="lesson-link" href="#contact">Request the schedule</a></p>
-        </div>
-    
-      </div>
-    </section>
+<section id="lessons">
+
+  <div class="lessons-intro">
+    Better golf with simple coaching.
+  </div>
+
+  <div class="lessons-grid">
+
+    <div class="lesson-col">
+      <h3>In-Person</h3>
+      <p>Private Lessons</p>
+      <p>Semi-Private Lessons</p>
+    </div>
+
+    <div class="lesson-col">
+      <h3>Virtual Lessons</h3>
+      <p>Online swing review</p>
+      <p>Live Zoom lesson</p>
+    </div>
+
+    <div class="lesson-col">
+      <h3>Group Lesson Schedule</h3>
+      <p>Weekly clinics &amp; juniors</p>
+      <p><a class="lesson-link" href="#contact">Request the schedule</a></p>
+    </div>
+
+  </div>
+</section>
+
 
 
   
@@ -384,6 +401,7 @@
 
 </body>
 </html>
+
 
 
 
