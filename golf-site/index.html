@@ -2,441 +2,290 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KYGolfAcademy | Golf Lessons</title>
+
   <style>
+    /* ===== Global ===== */
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background:#0b0f0c;
+      color:#f6f6f4;
+    }
 
     img{
-        user-select: none;
-        -webkit-user-drag: none;
-        pointer-events: none;
-      }
+      user-select:none;
+      -webkit-user-drag:none;
+      pointer-events:none;
+    }
 
-      .brand{
-        display: flex;
-        align-items: center;
-        gap: 16px;
-      }
-    
-    body { margin:0; font-family: Arial, sans-serif; background:#0b0f0c; color:#f6f6f4; }
-        .site-header{
-          position: sticky;
-          top: 0;
-          left: 0;
-          right: 0;
-          min-height: 120px;
-          background: rgba(11,15,12,.85);
-          backdrop-filter: blur(8px);
-          z-index: 10;
-        }      
-        /* TRUE left edge */
-        .tagline-left{
-            position: absolute;
-            left: 20px;
-            top: 14px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 8px;
-          }
-          .tagline-text{
-            font-size: 28px;
-            font-weight: 600;
-            letter-spacing: .4px;
-            line-height: 1.1;
-            white-space: nowrap;
-          }
-          
-          .header-btn{
-            margin-top: 0;
-            padding: 10px 14px;
-            font-size: 14px;
-            background: rgba(255,255,255,.12);
-            border: 1px solid rgba(255,255,255,.22);
-            border-radius: 12px;
-          }
+    section{
+      padding:60px 20px;
+      max-width:900px;
+      margin:0 auto;
+    }
 
-        /* Centered content */
-        .header-inner{
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 14px 20px 10px;  /* smaller = shorter header */
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-        
-        .brand img{
-          height: 78px;
-          width: auto;
-          max-height: 78px;
-        }
-        
-        /* Nav centered under logo */
-        .main-nav{
-          position: absolute;
-          top: 50%;
-          right: 20px;
-        
-          transform: translateY(-50%);
-          display: flex;
-          gap: 32px; /* slightly more breathing room */
-        }
+    .btn{
+      display:inline-block;
+      margin-top:14px;
+      padding:12px 18px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.2);
+      color:#f6f6f4;
+      text-decoration:none;
+    }
 
-        
-        .main-nav a{
-          color: #f6f6f4;
-          text-decoration: none;
-          font-size: 16px;
-          font-weight: 600;
-          letter-spacing: .4px;
-        }
-        
-        .main-nav a:hover{
-          text-decoration: underline;
-        }
+    /* ===== Header ===== */
+    .site-header{
+      position:sticky;
+      top:0;
+      background:rgba(11,15,12,.85);
+      backdrop-filter:blur(8px);
+      min-height:110px;
+      z-index:10;
+    }
 
+    .header-inner{
+      max-width:1200px;
+      margin:0 auto;
+      padding:14px 20px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      position:relative;
+    }
 
-    .hero { position:relative; height:85vh; min-height:600px; overflow:hidden; background:#000; }
+    .brand img{
+      height:78px;
+      width:auto;
+    }
+
+    .main-nav{
+      position:absolute;
+      top:50%;
+      right:20px;
+      transform:translateY(-50%);
+      display:flex;
+      gap:32px;
+    }
+
+    .main-nav a{
+      color:#f6f6f4;
+      text-decoration:none;
+      font-size:20px;
+      font-weight:600;
+      letter-spacing:.3px;
+    }
+
+    /* ===== Hero ===== */
+    .hero{
+      position:relative;
+      height:85vh;
+      min-height:600px;
+      background:#000;
+      overflow:hidden;
+    }
 
     .hero video{
       position:absolute;
       inset:0;
       width:100%;
       height:100%;
-      object-fit: contain;     /* shows the full swing */
-      object-position: center;
-      z-index:0;
+      object-fit:contain;
     }
-    
-    .overlay{
-      display: none;
-      position:absolute;
-      inset:0;
-      background:rgba(0,0,0,.25);
-      z-index:1;
+
+    /* ===== About ===== */
+    #about{
+      max-width:none;
+      padding:0;
     }
-    
-    .hero-text{
-      position:absolute;
-      left:20px;
-      right:20px;
-      bottom:70px;             /* move text up/down */
-      max-width:900px;
-      z-index:2;
-    }
-      .hero-text h1, .hero-text p{
-    text-shadow: 0 2px 10px rgba(0,0,0,.35);
-  }
-
-      
-    section { padding:40px 20px; max-width:900px; margin:0 auto; }
-    .card { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.15); border-radius:14px; padding:18px; margin-top:14px; }
-      .btn{
-        display:inline-block;
-        margin-top:10px;
-        padding:10px 12px;
-        border-radius:12px;
-        border:1px solid rgba(255,255,255,.2);
-        color:#f6f6f4;
-        text-decoration:none;
-      }
-      
-      .about-btn{
-        display: inline-block;
-        margin-top: 14px;
-        padding: 12px 18px;
-        font-size: 14px;
-        text-align: center;
-      }
-
-
-    .btn:hover { opacity:.9; }
 
     .about-layout{
-      display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 40px;
-      align-items: start;   
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 40px 20px;
+      max-width:1400px;
+      margin:0 auto;
+      padding:60px 40px;
+      display:grid;
+      grid-template-columns:260px 1fr;
+      gap:40px;
+      align-items:start;
     }
-    
+
+    .about-photo{
+      text-align:left;
+    }
+
     .about-photo img{
-      width: 100%;
-      border-radius: 16px;
-      object-fit: cover;
+      width:100%;
+      height:380px;
+      object-fit:cover;
+      border-radius:16px;
     }
-    
+
     .about-text p{
-      line-height: 1.7;
-      font-size: 16px;
-      opacity: .92;
-      margin-bottom: 16px;
+      line-height:1.7;
+      margin-bottom:16px;
     }
+
     .about-text p:first-child{
-      margin-top: 0;
+      margin-top:0;
     }
 
-    .about-photo img{
-      height: 380px;
-    }
-
-
-    /* Make ONLY the About section full width */
-    #about{
-      max-width: none;      /* removes the 900px limit */
-      padding-left: 0;
-      padding-right: 0;
-    }
-    
-    #about .about-layout{
-      max-width: 1400px;    /* controls readable width */
-      margin: 0 auto;
-      padding: 60px 40px;   /* space inside the section */
-    }
-       /* --- Mobile fixes --- */
-
- /* --- Mobile fixes --- */
-    @media (max-width: 768px){
-      .site-header{ min-height: 150px; }
-      .tagline-left{ display: none; }
-
-      .location-grid{
-          grid-template-columns: 1fr;
-        }
-      
-        .location-map iframe{
-          height: 260px;
-        }
-      }
-      
-      .main-nav{
-        position: static;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 16px;
-        margin-top: 10px;
-      }
-    
-      .main-nav a{ font-size: 13px; }
-      .brand img{ height: 56px; }
-      .header-inner{ padding: 16px 16px 14px; }
-  
-      .location-grid{
-          grid-template-columns: 1fr;
-        }
-      
-        .location-map iframe{
-          height: 260px;
-        }
-      
-
-    
-      .about-layout{
-        grid-template-columns: 1fr;
-        gap: 18px;
-        padding: 28px 16px;
-      }
-      
-      .about-photo{
-        max-width: 220px;
-        margin: 0 auto;
-        text-align: center;
-      }
-    
-      .about-btn{
-        width: 100%;
-        max-width: 220px;
-      }
-    
-      .lessons-intro{
-        padding-left: 20px;
-        font-size: 22px;
-        margin-bottom: 24px;
-      }
-    
-      .lessons-grid{
-        grid-template-columns: 1fr;
-        gap: 18px;
-        padding: 0 20px;
-      }
-    }
-    
-     #lessons{
-      background: #000;          /* pitch black */
-      max-width: none;           /* full width background */
-      padding-left: 0;
-      padding-right: 0;
-    }
-    #lessons .card{
-      max-width: 900px;          /* same width as other sections */
-      margin: 0 auto;
-      background: rgba(255,255,255,.06); /* keeps card readable */
-    }
-  
+    /* ===== Lessons ===== */
     #lessons{
-      padding-top: 60px;
-      padding-bottom: 60px;
-    }
-
-    /* 3-column lessons layout */
-    .lessons-grid{
-      width: 100%;
-      margin: 0;
-      padding: 0 60px;
-    
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 48px;
-    }
-
-    @media (min-width: 1400px){
-      .lessons-grid{
-        padding-left: 120px;
-        padding-right: 120px;
-      }
-    }
-
-    
-    #lessons{
-      background: #000;
-      max-width: none;
-      margin: 0;
-      padding: 60px 0;
-    }
-
-    
-    .lesson-col h3{
-      margin: 0 0 12px;
-      font-size: 22px;
-      font-weight: 600;
-      letter-spacing: .2px;
-    }
-    
-    .lesson-col p{
-      margin: 0 0 10px;
-      font-size: 16px;
-      opacity: .9;
-    }
-    
-    .lesson-link{
-      color: #f6f6f4;
-      text-decoration: underline;
+      background:#000;
+      max-width:none;
+      margin:0;
+      padding:60px 0;
     }
 
     .lessons-intro{
-      font-size: 28px;
-      font-weight: 600;
-      letter-spacing: .4px;
-      margin-bottom: 40px;
-      padding-left: 60px;   /* aligns with grid */
+      font-size:28px;
+      font-weight:600;
+      letter-spacing:.4px;
+      padding-left:60px;
+      margin-bottom:40px;
     }
 
-    /* Location section */
+    .lessons-grid{
+      width:100%;
+      padding:0 60px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:48px;
+      text-align:center;
+    }
+
+    .lesson-col h3{
+      font-size:22px;
+      margin-bottom:12px;
+    }
+
+    .lesson-col p{
+      margin-bottom:10px;
+      opacity:.9;
+    }
+
+    /* ===== Location ===== */
     #location{
-      padding: 60px 20px;
-      max-width: none;
+      max-width:none;
     }
-    
+
     .location-grid{
-      max-width: 1200px;
-      margin: 0 auto;
-    
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: start;
+      max-width:1200px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:start;
     }
-    
-    .location-info h2{
-      margin-top: 0;
-      margin-bottom: 16px;
-    }
-    
-    .location-info p{
-      margin-bottom: 16px;
-      line-height: 1.6;
-    }
-    
-    .location-info ul{
-      padding-left: 18px;
-      margin: 0;
-    }
-    
-    .location-info li{
-      margin-bottom: 8px;
-    }
-    
+
     .location-map iframe{
-      width: 100%;
-      height: 320px;
-      border: 0;
-      border-radius: 12px;
+      width:100%;
+      height:320px;
+      border:0;
+      border-radius:12px;
     }
 
+    /* ===== Contact ===== */
+    .card{
+      background:rgba(255,255,255,.06);
+      border-radius:14px;
+      padding:18px;
+    }
 
+    /* ===== MOBILE (ONE BLOCK ONLY) ===== */
+    @media (max-width:768px){
+
+      .main-nav{
+        position:static;
+        transform:none;
+        justify-content:center;
+        margin-top:12px;
+        gap:16px;
+      }
+
+      .main-nav a{
+        font-size:16px;
+      }
+
+      .brand img{
+        height:56px;
+      }
+
+      .about-layout{
+        grid-template-columns:1fr;
+        padding:40px 20px;
+      }
+
+      .about-photo{
+        max-width:220px;
+        margin:0 auto;
+        text-align:center;
+      }
+
+      .lessons-intro{
+        padding-left:20px;
+        font-size:22px;
+      }
+
+      .lessons-grid{
+        grid-template-columns:1fr;
+        padding:0 20px;
+        gap:18px;
+      }
+
+      .location-grid{
+        grid-template-columns:1fr;
+      }
+
+      .location-map iframe{
+        height:260px;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="brand">
-        <img src="logo.png" alt="Kevin Yoon Golf" />
-      </div>
 
-      <nav class="main-nav">
-        <a href="#about">About</a>
-        <a href="#lessons">Lessons</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <img src="logo.png" alt="KY Golf Academy" />
     </div>
-  </header>
 
+    <nav class="main-nav">
+      <a href="#about">About</a>
+      <a href="#lessons">Lessons</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <div class="hero">
-    <video autoplay muted loop playsinline preload="auto" poster="poster.jpg">
-      <source src="swing.mp4" type="video/mp4" />
-    </video>
-    <div class="overlay"></div>
-    <div class="hero-text"></div>
-    </div> <!-- ✅ THIS closes .hero -->
-    
-    <section id="about">
+<div class="hero">
+  <video autoplay muted loop playsinline>
+    <source src="swing.mp4" type="video/mp4" />
+  </video>
+</div>
+
+<section id="about">
   <div class="about-layout">
-    
     <div class="about-photo">
       <img src="profile.jpg" alt="Kevin Yoon" />
-      <a class="btn about-btn" href="#contact">Book a Lesson</a>
+      <a class="btn" href="#contact">Book a Lesson</a>
     </div>
 
     <div class="about-text">
-      <p>I grew up in Blacksburg, Virginia, a small college town in the Blue Ridge Mountains. No one in my family played golf, so my chances of getting into the game were slim. There was, however, a local nine-hole college course where I largely taught myself how to play until the age of 17.</p>
-
-      <p>What felt like destiny came when I became close friends with a golfer who is now my best friend. Through him, I was introduced to the world of golf and met an incredible PGA Professional named Steve Prater, who remains one of the most influential mentors in my life. His encouragement and guidance went far beyond golf—he taught me invaluable lessons about life as well. From that moment on, I was hooked.</p>
-
-      <p>Within a year, I became a single-digit handicap player and earned multiple top-10 finishes in tournaments across the nation. In high school, I joined the varsity golf team alongside several outstanding players, all coached by Steve. Together, we went on to win three consecutive Virginia state championships.</p>
-
-      <p>Coming from a family with strong academic expectations, my path ultimately led me toward education. I pursued business and engineering degrees from George Washington University and Cornell University. Despite this, my passion for golf never faded. In 2010, I earned my teaching license from the United States Golf Teachers Federation and have remained in good standing ever since.</p>
-
-      <p>I am currently a teaching professional at Pinecrest Golf Course in Alexandria, Virginia. I combine my playing experience with my engineering and analytical background to help students understand not just what they do in their golf swing, but why they do it.</p>
-
-      <p>I approach coaching in a systematic, logical way that helps golfers learn more efficiently and confidently. I look forward to the opportunity to share my knowledge and passion for the game with you.</p>
+      <p>I grew up in Blacksburg, Virginia, a small college town in the Blue Ridge Mountains...</p>
+      <p>What felt like destiny came when I became close friends with a golfer...</p>
     </div>
-
   </div>
 </section>
 
 <section id="lessons">
-
-  <div class="lessons-intro">
-    Better golf with simple coaching.
-  </div>
+  <div class="lessons-intro">Better golf with simple coaching.</div>
 
   <div class="lessons-grid">
-
     <div class="lesson-col">
       <h3>In-Person</h3>
       <p>Private Lessons</p>
@@ -445,72 +294,38 @@
       <p>Field Lessons</p>
     </div>
 
-
     <div class="lesson-col">
       <h3>Virtual Lessons</h3>
-      <p>Online swing review</p>
+      <p>Online Swing Review</p>
     </div>
 
     <div class="lesson-col">
       <h3>Group Lesson Schedule</h3>
-      <p>Weekly clinics &amp; juniors</p>
+      <p>Weekly clinics & juniors</p>
     </div>
-
   </div>
 </section>
 
-
-  <section id="location">
-  
-    <div class="location-grid">
-  
-      <!-- LEFT: Text info -->
-      <div class="location-info">
-        <h2>Location</h2>
-  
-        <p>
-          <strong>Pinecrest Golf Course</strong><br>
-          6600 Little River Turnpike<br>
-          Alexandria, VA 22312
-        </p>
-  
-        <p>
-          <strong>Hours</strong><br>
-          Lessons by appointment<br>
-          Weekdays & weekends
-        </p>
-  
-        <p>
-          <strong>Main Course Info</strong>
-        </p>
-        <ul>
-          <li>Public course</li>
-          <li>Short game practice area</li>
-          <li>All skill levels welcome</li>
-        </ul>
-      </div>
-  
-      <!-- RIGHT: Map -->
-      <div class="location-map">
-        <iframe
-          src="https://www.google.com/maps?q=Pinecrest%20Golf%20Course%20Alexandria%20VA&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-  
+<section id="location">
+  <div class="location-grid">
+    <div>
+      <h2>Location</h2>
+      <p><strong>Pinecrest Golf Course</strong><br>Alexandria, VA</p>
     </div>
-  
-  </section>
 
-  
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="card">
-      <p>Email [Recommended]: <a href="mailto:kygolfacademy@gmail.com" style="color:#f6f6f4;">kygolfacademy@gmail.com</a></p>
-      <p>Phone: (703) 941-1061</p>
+    <div class="location-map">
+      <iframe src="https://www.google.com/maps?q=Pinecrest%20Golf%20Course%20Alexandria%20VA&output=embed"></iframe>
     </div>
-  </section>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Email: <a href="mailto:kygolfacademy@gmail.com">kygolfacademy@gmail.com</a></p>
+    <p>Phone: (703) 941-1061</p>
+  </div>
+</section>
 
 <script>
   document.addEventListener('contextmenu', e => e.preventDefault());
@@ -519,56 +334,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
