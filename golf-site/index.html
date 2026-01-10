@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>KYGolfAcademy | Golf Lessons</title>
   <style>
+
+    img{
+        user-select: none;
+        -webkit-user-drag: none;
+        pointer-events: none;
+      }
+
       .brand{
         display: flex;
         align-items: center;
@@ -404,10 +411,12 @@
 
 <script>
   document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('dragstart', e => e.preventDefault());
 </script>
 
 </body>
 </html>
+
 
 
 
