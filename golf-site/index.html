@@ -202,7 +202,16 @@
     @media (max-width: 768px){
       .site-header{ min-height: 150px; }
       .tagline-left{ display: none; }
-    
+
+      .location-grid{
+          grid-template-columns: 1fr;
+        }
+      
+        .location-map iframe{
+          height: 260px;
+        }
+      }
+      
       .main-nav{
         position: static;
         justify-content: center;
@@ -214,13 +223,23 @@
       .main-nav a{ font-size: 13px; }
       .brand img{ height: 56px; }
       .header-inner{ padding: 16px 16px 14px; }
+  
+      .location-grid{
+          grid-template-columns: 1fr;
+        }
+      
+        .location-map iframe{
+          height: 260px;
+        }
+      
+
     
       .about-layout{
         grid-template-columns: 1fr;
         gap: 18px;
         padding: 28px 16px;
       }
-    
+      
       .about-photo{
         max-width: 220px;
         margin: 0 auto;
@@ -315,6 +334,48 @@
       padding-left: 60px;   /* aligns with grid */
     }
 
+    /* Location section */
+    #location{
+      padding: 60px 20px;
+      max-width: none;
+    }
+    
+    .location-grid{
+      max-width: 1200px;
+      margin: 0 auto;
+    
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    
+    .location-info h2{
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+    
+    .location-info p{
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+    
+    .location-info ul{
+      padding-left: 18px;
+      margin: 0;
+    }
+    
+    .location-info li{
+      margin-bottom: 8px;
+    }
+    
+    .location-map iframe{
+      width: 100%;
+      height: 320px;
+      border: 0;
+      border-radius: 12px;
+    }
+
 
   </style>
 </head>
@@ -399,6 +460,48 @@
 </section>
 
 
+  <section id="location">
+  
+    <div class="location-grid">
+  
+      <!-- LEFT: Text info -->
+      <div class="location-info">
+        <h2>Location</h2>
+  
+        <p>
+          <strong>Pinecrest Golf Course</strong><br>
+          6600 Little River Turnpike<br>
+          Alexandria, VA 22312
+        </p>
+  
+        <p>
+          <strong>Hours</strong><br>
+          Lessons by appointment<br>
+          Weekdays & weekends
+        </p>
+  
+        <p>
+          <strong>Main Course Info</strong>
+        </p>
+        <ul>
+          <li>Public course</li>
+          <li>Short game practice area</li>
+          <li>All skill levels welcome</li>
+        </ul>
+      </div>
+  
+      <!-- RIGHT: Map -->
+      <div class="location-map">
+        <iframe
+          src="https://www.google.com/maps?q=Pinecrest%20Golf%20Course%20Alexandria%20VA&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+  
+    </div>
+  
+  </section>
 
   
   <section id="contact">
@@ -416,6 +519,7 @@
 
 </body>
 </html>
+
 
 
 
