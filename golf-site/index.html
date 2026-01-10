@@ -268,6 +268,26 @@
         height:260px;
       }
     }
+
+    /* Contact section – full width pitch black */
+      #contact{
+        background: #000;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 80px 20px;
+        border-top: 1px solid rgba(255,255,255,.12);
+      }
+      
+      #contact .contact-inner{
+        max-width: 900px;   /* keeps text aligned like other sections */
+        margin: 0 auto;
+      }
+      
+      #contact a{
+        color: #f6f6f4;
+      }
+
   </style>
 </head>
 
@@ -343,41 +363,49 @@
 
 <section id="location">
   <div class="location-grid">
-    <div>
+
+    <div class="location-info">
       <h2>Location</h2>
-        <p>
-          <strong>Pinecrest Golf Course</strong><br>
-          6600 Little River Turnpike<br>
-          Alexandria, VA 22312
-        </p>
-  
-        <p>
-          <strong>Hours</strong><br>
-          Lessons by appointment<br>
-          Weekdays & weekends
-        </p>
-  
-        <p>
-          <strong>Main Course Info</strong>
-        </p>
-        <ul>
-          <li>Public course</li>
-          <li>Short game practice area</li>
-          <li>All skill levels welcome</li>
-        </ul>
-      </div>
+
+      <p>
+        <strong>Pinecrest Golf Course</strong><br>
+        6600 Little River Turnpike<br>
+        Alexandria, VA 22312
+      </p>
+
+      <p>
+        <strong>Hours</strong><br>
+        Lessons by appointment<br>
+        Weekdays &amp; weekends
+      </p>
+
+      <p><strong>Main Course Info</strong></p>
+      <ul>
+        <li>Public course</li>
+        <li>Short game practice area</li>
+        <li>All skill levels welcome</li>
+      </ul>
+    </div>
 
     <div class="location-map">
-      <iframe src="https://www.google.com/maps?q=Pinecrest%20Golf%20Course%20Alexandria%20VA&output=embed"></iframe>
+      <iframe
+        src="https://www.google.com/maps?q=Pinecrest%20Golf%20Course%20Alexandria%20VA&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
+
   </div>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:kygolfacademy@gmail.com">kygolfacademy@gmail.com</a></p>
-  <p>Phone: (703) 941-1061</p>
+  <div class="contact-inner">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:kygolfacademy@gmail.com">kygolfacademy@gmail.com</a></p>
+    <p>Phone: (703) 941-1061</p>
+  </div>
 </section>
+
 
 
 <script>
@@ -387,6 +415,7 @@
 
 </body>
 </html>
+
 
 
 
