@@ -2,79 +2,196 @@
   {
     "id": "entry-001",
     "title": "Golf Grip (Foundation of Ball Control)",
+    "category": "Grip",
+    "level": "Beginner",
+    "applies_to": ["full swing", "irons", "driver"],
+    "common_questions": [
+      "How should I grip the club?",
+      "Why does my ball go left or right?",
+      "What does holding the bird mean?",
+      "How do I get more distance?"
+    ],
+    "quick_fix": "Grip like holding a bird. See ~2.5 knuckles on each hand. End of grip = more distance; middle = more control; choke down = shorter shots.",
     "tags": ["grip", "knuckles", "bird", "distance", "control", "choke down"],
-    "content": "Grip is the most important fundamental. It largely determines whether the ball goes right, left, or straight. Grip pressure should feel like holding a bird: not so hard you harm it, not so soft it escapes. Visual check: when you look down after gripping, you should see about 2.5 knuckles on each hand. Grip position on the handle affects distance and control: hold at the very end of the grip to maximize distance; hold in the middle to lose ~5–10 yards but gain control (common for control shots as you progress); choke down closer to the shaft for shorter, more controlled distance. Core rule: grip pressure stays the same—grip position changes the result."
+    "content": "Grip is the most important fundamental. It largely determines whether the ball goes right, left, or straight. Grip pressure should feel like holding a bird: not so hard you harm it, not so soft it escapes. Visual check: when you look down after gripping, you should see about 2.5 knuckles on each hand. Grip position on the handle affects distance and control: hold at the very end of the grip to maximize distance; hold in the middle to lose ~5–10 yards but gain control; choke down closer to the shaft for shorter, more controlled distance."
   },
   {
     "id": "entry-002",
     "title": "Grip Pressure (Bird Example)",
+    "category": "Grip",
+    "level": "Beginner",
+    "applies_to": ["full swing"],
+    "common_questions": [
+      "Am I gripping too tight?",
+      "Why do my hands feel tense?",
+      "How hard should I hold the club?"
+    ],
+    "quick_fix": "Grip pressure = holding a bird. Secure but relaxed. Never squeeze for power.",
     "tags": ["grip pressure", "tension", "bird", "relaxed hands"],
     "content": "Grip pressure should feel like holding a bird: too tight and you harm it, too loose and it escapes. The correct pressure is secure but relaxed. Avoid squeezing harder to create power—tension reduces consistency and timing."
   },
   {
     "id": "entry-003",
     "title": "Setup & Posture (Uneven Chair Foundation)",
-    "tags": ["setup", "posture", "spine angle", "head still", "knees", "stance width", "ball position", "7 iron"],
-    "content": "Setup and posture create the foundation of the swing. A bad setup is like sitting on a chair with uneven legs—no matter how good your motion is, you won’t be stable. Stance: feet about shoulder-width apart. Knees: softly unlocked, like a football front lineman—athletic and ready; from the knees down the legs feel straight/vertical and relaxed (near 90 degrees to the ground). Ball position changes by club, but for a 7-iron place the ball in the middle of your stance. Back/spine: somewhat straight but not rigid—too tight strains movement. Spine/head: your spine is the axis; the body rotates around the spine. Keep your head and spine relatively still, maintaining a roughly 45-degree spine angle throughout the swing. Arms/forearms cue: imagine a stick through your forearms—left arm straight, right arm slightly bent around ~45 degrees and relaxed."
+    "category": "Setup",
+    "level": "Beginner",
+    "applies_to": ["full swing", "irons", "driver"],
+    "common_questions": [
+      "How should I stand over the ball?",
+      "Why do I top or chunk shots?",
+      "Should my head move?",
+      "Where should the ball be with a 7 iron?"
+    ],
+    "quick_fix": "Feet shoulder-width. Knees softly unlocked. Spine ~45° and relaxed. Head stays still. Body rotates around spine. 7-iron ball position = middle.",
+    "tags": ["setup", "posture", "spine angle", "head still", "knees", "ball position"],
+    "content": "Setup and posture create the foundation of the swing. A bad setup is like sitting on a chair with uneven legs. Feet shoulder-width apart. Knees softly unlocked like a football lineman. Spine somewhat straight but relaxed, tilted ~45 degrees. Head and spine stay relatively still as the body rotates around the spine. Ball position for a 7-iron is in the middle of the stance."
   },
   {
     "id": "entry-004",
     "title": "Swing A: Takeaway (One Motion, Maintain Triangle)",
-    "tags": ["takeaway", "triangle", "one piece", "drills", "clubface", "wrist", "feedback"],
-    "content": "Takeaway should be one motion. Feel like the triangle shape formed by your arms/shoulders is maintained as you take the club away. Drills: (1) Ball-between-forearms drill—place a small ball between forearms to maintain connection. (2) Two-ball drill—place a second golf ball behind the ball; with the clubface in between, the back ball should roll straight back during takeaway. Takeaway position checkpoints: (1) Club shaft parallel to the ground and parallel to your feet (imaginary line). (2) Clubface matches the angle of your wrist around ~45 degrees. (3) Left wrist should not be cocking yet. Self-diagnosing feedback: if the takeaway feels rushed, tense, or disconnected, reset—don’t continue. On short swings, if the ball starts generally straight with solid contact, you’re on track; if ball flight is wildly left/right, return to basics: grip, grip pressure, and setup."
+    "category": "Swing",
+    "level": "Beginner",
+    "applies_to": ["full swing"],
+    "common_questions": [
+      "How do I start the swing?",
+      "Why does my swing feel disconnected?",
+      "Why does my clubface open early?"
+    ],
+    "quick_fix": "Move the triangle as one piece. No wrist cock yet. Shaft parallel to ground and feet.",
+    "tags": ["takeaway", "triangle", "one piece", "clubface", "feedback"],
+    "drills": ["ball-between-forearms", "two-ball drill"],
+    "content": "Takeaway should be one motion. Maintain the triangle formed by arms and chest. Drills include the ball-between-forearms drill and two-ball drill. Checkpoints: shaft parallel to ground and feet, clubface ~45°, left wrist not cocking yet. If takeaway feels rushed or disconnected, reset."
   },
   {
     "id": "entry-005",
-    "title": "Swing B: L-Shape (Position B – Wrist Cocking ~45°)",
-    "tags": ["l shape", "position b", "wrist hinge", "leverage", "structure", "checkpoints", "feedback"],
-    "content": "From the takeaway, wrists begin to hinge naturally into an L-shape (Position B). Do not force the hinge early—it happens after a connected takeaway. Key checkpoints at Position B: (1) Left arm parallel to the ground. (2) Left arm parallel to your feet (imaginary line across stance). (3) Club shaft forms roughly a ~45-degree angle with the lead arm. (4) Clubface stays stable (not flipped). (5) Hands/forearms remain relaxed. Self-diagnosing feedback: if you can’t hold Position B comfortably, something earlier broke down—return to grip/setup/takeaway. On L-shape swings at ~60–70% speed, if the ball flies straight/predictable you’re on track; if it curves excessively or feels weak/inconsistent, rebuild from Entry 004 and grip basics."
+    "title": "Swing B: L-Shape (Position B)",
+    "category": "Swing",
+    "level": "Beginner",
+    "applies_to": ["full swing"],
+    "common_questions": [
+      "When do I hinge my wrists?",
+      "What is Position B?",
+      "Why do I lose structure early?"
+    ],
+    "quick_fix": "Left arm parallel to ground and feet. Natural hinge ~45°. No forcing.",
+    "tags": ["l shape", "position b", "wrist hinge", "structure"],
+    "drills": ["L-shape swings"],
+    "content": "After the takeaway, wrists hinge naturally into an L-shape. Position B checkpoints: left arm parallel to ground and feet, club shaft ~45°, relaxed hands. If Position B isn’t comfortable, fix earlier fundamentals."
   },
   {
     "id": "entry-006",
-    "title": "Swing C: Shoulder Turn (Position C – “Hip Back, Shoulder Turn”)",
-    "tags": ["shoulder turn", "position c", "hip back", "rotation", "chin", "left shoulder under chin"],
-    "content": "From Position B to Position C, use the cue: “hip back, shoulder turn.” Move the right hip back (not sliding), then turn the shoulders around a stable spine. Key Position C checkpoints: (1) Right hip moves back slightly behind you—no slide toward target. (2) Shoulders fully turn; chest turns away from target. (3) Left shoulder should be directly under your chin. (4) If your chin blocks your shoulder turn, raise your chin slightly at setup so the shoulder can turn underneath. The backswing is powered by rotation, not arm lift."
+    "title": "Swing C: Shoulder Turn (Hip Back, Shoulder Turn)",
+    "category": "Swing",
+    "level": "Intermediate",
+    "applies_to": ["full swing"],
+    "common_questions": [
+      "How far should I turn?",
+      "Why do I lift my arms?",
+      "What does hip back mean?"
+    ],
+    "quick_fix": "Move right hip back. Turn shoulders. Left shoulder under chin. Raise chin if blocked.",
+    "tags": ["shoulder turn", "hip back", "rotation", "chin"],
+    "content": "From Position B to C: hip back, shoulder turn. Right hip moves back, not sliding. Shoulders rotate fully. Left shoulder should pass under chin; raise chin at setup if needed."
   },
   {
     "id": "entry-007",
-    "title": "Swing D: Swing Through the Ball (Position D – Reverse L + L-to-L Drill)",
-    "tags": ["position d", "swing through", "reverse l", "compression", "l to l drill", "practice", "feedback"],
-    "content": "Position D is swinging through the ball. This requires a lot of practice—hundreds (or more) swings and ball strikes to truly feel it. Principle: swing through the ball, not at it; let rotation and sequencing deliver the club. Reverse L-shape concept: just after impact, lead arm stays relatively straight, trail arm bent, forming a Reverse L on the follow-through side. Essential drill: L-to-L drill—stop in backswing at Position B (L-shape), then swing through and stop on the other side in Reverse L. Ball-flight feedback: during L-to-L, if you’re swinging ~70–80% of full speed and the ball still goes straight and solid, you’re on track. If not (poor contact or big curve), something is off—return to basics: grip, grip pressure, setup/posture, takeaway, and Position B."
+    "title": "Swing D: Swing Through the Ball (Position D)",
+    "category": "Swing",
+    "level": "Intermediate",
+    "applies_to": ["full swing"],
+    "common_questions": [
+      "How do I compress the ball?",
+      "Why do I flip at impact?",
+      "What is the L-to-L drill?"
+    ],
+    "quick_fix": "Swing through the ball. Practice L-to-L at 70–80%. Straight ball = on track.",
+    "tags": ["position d", "reverse l", "compression", "l to l drill"],
+    "drills": ["L-to-L drill"],
+    "content": "Position D is swinging through the ball. Requires repetition. Reverse L appears after impact. L-to-L drill builds feel. If 70–80% swings fly straight, you’re on track; otherwise rebuild fundamentals."
   },
   {
     "id": "entry-008",
-    "title": "Swing E: Finish (Hold the Finish, Shaft Touching Neck)",
-    "tags": ["finish", "balance", "shaft on neck", "hold finish", "truth teller"],
-    "content": "Finish is the truth teller. A proper finish can’t be faked—it reflects everything before it. Finish checkpoints: body fully rotated toward target, weight mostly on lead side, chest/hips facing target, balanced and stable. Club/shaft: the shaft should be touching or resting against the neck at the finish. Hold the finish—staying balanced is very important. Self-diagnosing feedback: if you can’t hold the finish comfortably (falling, stepping, rushing), something earlier broke down—return to setup/posture and takeaway first."
+    "title": "Swing E: Finish (Hold the Finish)",
+    "category": "Swing",
+    "level": "Beginner",
+    "applies_to": ["full swing"],
+    "common_questions": [
+      "What should my finish look like?",
+      "Why do I lose balance?",
+      "Why is my swing inconsistent?"
+    ],
+    "quick_fix": "Shaft touching neck. Hold the finish. Stay balanced.",
+    "tags": ["finish", "balance", "shaft on neck"],
+    "content": "Finish is the truth teller. Shaft should touch the neck. Weight on lead side. Hold the finish. If you can’t hold it, something earlier broke down."
   },
   {
     "id": "entry-009",
-    "title": "Ball Keeps Going Right (Diagnostics)",
-    "tags": ["ball right", "push", "slice", "clubface", "rotation", "diagnostics"],
-    "content": "When the ball consistently goes right, the clubface is not returning square (or the swing direction is pushing it right). Most common causes: (1) Grip issue—too weak or hands not working together; re-check Entry 001/002. (2) Takeaway breakdown—triangle breaks early or clubface opens; re-check Entry 004. (3) Incomplete rotation—body stops and hands try to save it; re-check Entry 006/007. Self-check: do L-to-L at 70–80% speed; if it still goes right, don’t swing harder—rebuild from the basics."
+    "title": "Ball Goes Right (Diagnostics)",
+    "category": "BallFlight",
+    "level": "Beginner",
+    "applies_to": ["full swing"],
+    "common_questions": [
+      "Why does my ball go right?",
+      "Why do I push or slice?"
+    ],
+    "quick_fix": "Check grip first, then takeaway, then rotation. Don’t swing harder.",
+    "tags": ["ball right", "slice", "push"],
+    "content": "Ball going right usually means grip, takeaway, or incomplete rotation. Use L-to-L at 70–80% to diagnose."
   },
   {
     "id": "entry-010",
-    "title": "Ball Keeps Going Left (Diagnostics)",
-    "tags": ["ball left", "pull", "hook", "hands", "clubface", "diagnostics"],
-    "content": "When the ball consistently goes left, the clubface is closing too early or the hands are overpowering the swing. Most common causes: (1) Grip too strong; neutralize (Entry 001). (2) Overactive hands/flip; return to Entry 007 (swing through). (3) Stalled rotation—body stops and hands take over; reinforce Entry 006 and hold finish (Entry 008). Self-check: L-to-L at ~70–80% speed; if it still goes left, something is being forced—slow down and rebuild fundamentals."
+    "title": "Ball Goes Left (Diagnostics)",
+    "category": "BallFlight",
+    "level": "Beginner",
+    "applies_to": ["full swing"],
+    "common_questions": [
+      "Why does my ball go left?",
+      "Why do I hook or pull?"
+    ],
+    "quick_fix": "Neutralize grip. Stop flipping. Keep rotating and hold finish.",
+    "tags": ["ball left", "hook", "pull"],
+    "content": "Ball going left is usually from strong grip, overactive hands, or stalled rotation."
   },
   {
     "id": "entry-011",
-    "title": "Topping the Ball (Thin/Topped Contact Diagnostics)",
-    "tags": ["topping", "thin", "contact", "standing up", "spine angle", "balance"],
-    "content": "Topping happens when the bottom of the swing arc is too high, usually from losing posture/balance or trying to lift the ball. Common causes: (1) Standing up through impact—spine angle changes; revisit Entry 003 and hold finish (Entry 008). (2) Trying to lift/scoop—early release; trust loft and swing through (Entry 007). (3) Poor weight shift—hanging back; finish on lead side (Entry 008). Feedback: if topping happens more when swinging harder, posture/balance is breaking—slow down to 70–80% and rebuild fundamentals."
+    "title": "Topping the Ball",
+    "category": "Contact",
+    "level": "Beginner",
+    "applies_to": ["irons"],
+    "common_questions": [
+      "Why do I top the ball?",
+      "Why do I thin shots?"
+    ],
+    "quick_fix": "Maintain spine angle. Don’t lift. Swing through.",
+    "tags": ["topping", "thin", "contact"],
+    "content": "Topping happens when the swing bottom is too high, usually from standing up or scooping."
   },
   {
     "id": "entry-012",
-    "title": "Chunking the Ground (Fat Shot Diagnostics)",
-    "tags": ["chunking", "fat", "ground first", "ball position", "low point", "weight shift"],
-    "content": "Chunking happens when the bottom of the swing arc is too far behind the ball, causing ground-first contact. Common causes: (1) Ball position too far forward (especially irons); with a 7-iron keep it middle (Entry 003). (2) Hanging back on trail side—no forward rotation; revisit Entry 007/008. (3) Arms overactive / body not rotating; revisit Entry 006. Self-test: place a tee ~2 inches in front of the ball and try to strike ball then tee—if you hit ground before ball, your low point is behind the ball."
+    "title": "Chunking the Ground (Fat Shots)",
+    "category": "Contact",
+    "level": "Beginner",
+    "applies_to": ["irons", "wedges"],
+    "common_questions": [
+      "Why do I hit the ground first?",
+      "Why do I chunk shots?"
+    ],
+    "quick_fix": "Ball first then ground. 7-iron ball in middle. Finish forward.",
+    "tags": ["chunking", "fat", "ground first"],
+    "content": "Chunking happens when the swing bottom is behind the ball. Fix ball position, weight shift, and rotation."
   },
   {
     "id": "entry-013",
-    "title": "Hit a Fade or Draw (Simple Setup Method)",
-    "tags": ["fade", "draw", "shot shaping", "alignment", "outside in", "inside out"],
-    "content": "To shape the ball, the easiest method is changing foot setup and swing direction—not manipulating hands. Fade (left-to-right): set feet slightly open, align body slightly left, clubface aimed at target; swing slightly outside-to-inside along your foot line for a controlled fade. Draw (right-to-left): set feet slightly closed, align body slightly right, clubface aimed at target; swing slightly inside-to-outside along your foot line for a controlled draw. Rules: keep grip/posture/balance the same; keep clubface near target; small setup changes only. Feedback: if curve is too much, setup change is too extreme; if no curve, swing direction didn’t match the setup."
+    "title": "Hit a Fade or Draw (Setup Method)",
+    "category": "ShotShaping",
+    "level": "Intermediate",
+    "applies_to": ["full swing"],
+    "common_questions": [
+      "How do I hit a fade?",
+      "How do I hit a draw?"
+    ],
+    "quick_fix": "Change feet and swing direction, not your hands.",
+    "tags": ["fade", "draw", "shot shaping"],
+    "content": "Fade: feet open, swing outside-in. Draw: feet closed, swing inside-out. Keep grip and posture the same."
   }
 ]
