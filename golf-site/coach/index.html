@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KY Golf Academy — Coach Chat</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; margin: 0; background: #f6f7f9; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 16px; }
+    .card { background: white; border-radius: 12px; padding: 16px; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    #messages { display: flex; flex-direction: column; gap: 10px; min-height: 50vh; padding: 8px 0; }
+    .msg { padding: 10px 12px; border-radius: 12px; max-width: 85%; white-space: pre-wrap; }
+    .user { align-self: flex-end; background: #e7f0ff; }
+    .bot  { align-self: flex-start; background: #f1f2f4; }
+    .meta { color: #666; font-size: 12px; margin-top: 6px; }
+    form { display: flex; gap: 8px; margin-top: 12px; }
+    input { flex: 1; padding: 12px; border-radius: 10px; border: 1px solid #d0d5dd; }
+    button { padding: 12px 14px; border-radius: 10px; border: 0; background: #111827; color: white; cursor: pointer; }
+    button:disabled { opacity: 0.6; cursor: not-allowed; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h2 style="margin:0 0 8px;">KY Golf Academy — Coach Chat</h2>
+      <div style="color:#555; margin-bottom: 8px;">
+        Private beta. Answers are based only on Kevin’s entries.
+      </div>
+
+      <div id="messages"></div>
+
+      <form id="chatForm">
+        <input id="q" placeholder="Ask: why is my ball going right?..." autocomplete="off" />
+        <button id="send" type="submit">Send</button>
+      </form>
+
+      <div id="status" class="meta"></div>
+    </div>
+  </div>
+
+<script>
+  const messages = document.getElementById('messages');
+  const form = document.getElementById('chatForm');
+  const input = document.getElementById('q');
+  const sendBtn = document.getElementById('send');
+  const statusEl = document.getElementById('status');
+
+  function addMsg(text, who, meta) {
+    const div = document.createElement('div');
+    div.className = `msg ${who}`;
+    div.textContent = text;
+    messages.appendChild(div);
+
+    if (meta) {
+      const m = document.createElement('div');
+      m.className = 'meta';
+      m.textContent = meta;
+      messages.appendChild(m);
+    }
+
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const question = input.value.trim();
+    if (!question) return;
+
+    addMsg(question, 'user');
+    input.value = '';
+    sendBtn.disabled = true;
+    statusEl.textContent = 'Thinking...';
+
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ question })
+      });
+
+      const dataText = await res.text();
+      if (!res.ok) {
+        addMsg(`Error (${res.status}): ${dataText}`, 'bot');
+        return;
+      }
+      const data = JSON.parse(dataText);
+
+      addMsg(data.answer || '(no answer)', 'bot', data.citations?.length ? `Used: ${data.citations.join(', ')}` : '');
+    } catch (err) {
+      addMsg(`Error: ${err.message}`, 'bot');
+    } finally {
+      sendBtn.disabled = false;
+      statusEl.textContent = '';
+      input.focus();
+    }
+  });
+
+  addMsg("Ask me anything from your swing system (grip, setup, takeaway, L-shape, shoulder turn, through-swing, finish, right/left, topping/chunking, fade/draw).", "bot");
+</script>
+</body>
+</html>
