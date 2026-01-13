@@ -3,7 +3,7 @@ export async function onRequest(context) {
   const url = new URL(request.url);
 
   // 🔒 Change this to the path you want locked
-  const PROTECTED_PREFIX = "/coach";
+  const PROTECTED_PREFIX = "/";
 
   if (!url.pathname.startsWith(PROTECTED_PREFIX)) {
     return next();
