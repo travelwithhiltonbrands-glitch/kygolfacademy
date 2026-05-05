@@ -21,13 +21,9 @@
       --max:1200px;
     }
 
-    *{
-      box-sizing:border-box;
-    }
+    *{ box-sizing:border-box; }
 
-    html{
-      scroll-behavior:smooth;
-    }
+    html{ scroll-behavior:smooth; }
 
     body{
       margin:0;
@@ -45,22 +41,18 @@
       letter-spacing:.2px;
     }
 
-    p{
-      margin:0 0 16px;
-    }
+    p{ margin:0 0 16px; }
+    a{ color:inherit; }
 
-    a{
-      color:inherit;
-    }
-
-    img, video{
+    img{
       display:block;
       max-width:100%;
+      user-select:none;
+      -webkit-user-drag:none;
+      pointer-events:none;
     }
 
-    section{
-      padding:90px 24px;
-    }
+    section{ padding:90px 24px; }
 
     .container{
       width:min(var(--max), calc(100% - 48px));
@@ -109,7 +101,8 @@
       box-shadow:var(--shadow);
     }
 
-    .btn-primary:hover{
+    .btn-primary:hover,
+    .btn-dark:hover{
       transform:translateY(-2px);
     }
 
@@ -126,10 +119,6 @@
     .btn-dark{
       background:var(--accent);
       color:var(--white);
-    }
-
-    .btn-dark:hover{
-      transform:translateY(-2px);
     }
 
     /* Header */
@@ -194,7 +183,7 @@
       align-items:flex-end;
     }
 
-    .hero video{
+    .hero-image{
       position:absolute;
       inset:0;
       width:100%;
@@ -361,7 +350,7 @@
       color:var(--text);
     }
 
-    /* Philosophy / split section */
+    /* Philosophy */
     .split-section{
       background:var(--text);
       color:var(--white);
@@ -607,15 +596,13 @@
       </nav>
 
       <div class="header-cta">
-        <a class="btn btn-dark" href="#contact">Book a Lesson</a>
+        <a class="btn btn-dark" href="mailto:kygolfacademy@gmail.com?subject=Lesson%20Scheduling%20Request&body=Hi%20Kevin%2C%0A%0AI%27d%20like%20to%20schedule%20a%20lesson.%20Please%20send%20me%20your%20booking%20link.%0A%0AName%3A%0AGolf%20experience%3A%0APreferred%20lesson%20type%3A%0A">Request Booking Link</a>
       </div>
     </div>
   </header>
 
   <section class="hero">
-    <video autoplay muted loop playsinline>
-      <source src="swing.mp4" type="video/mp4" />
-    </video>
+    <img src="poster.jpg" alt="Golf swing at KY Golf Academy" class="hero-image" />
 
     <div class="hero-content">
       <div class="hero-kicker">English & Korean Instruction</div>
@@ -625,7 +612,7 @@
         smarter practice, and lasting confidence on the course.
       </p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#contact">Book a Lesson</a>
+        <a class="btn btn-primary" href="mailto:kygolfacademy@gmail.com?subject=Lesson%20Scheduling%20Request&body=Hi%20Kevin%2C%0A%0AI%27d%20like%20to%20schedule%20a%20lesson.%20Please%20send%20me%20your%20booking%20link.%0A%0AName%3A%0AGolf%20experience%3A%0APreferred%20lesson%20type%3A%0A">Request Booking Link</a>
         <a class="btn btn-secondary" href="#about">Meet Kevin</a>
       </div>
     </div>
@@ -654,7 +641,7 @@
             Pinecrest Golf Course<br>
             Alexandria, Virginia
           </p>
-          <a class="btn btn-dark" href="#contact">Enquire Now</a>
+          <a class="btn btn-dark" href="mailto:kygolfacademy@gmail.com?subject=Lesson%20Scheduling%20Request&body=Hi%20Kevin%2C%0A%0AI%27d%20like%20to%20schedule%20a%20lesson.%20Please%20send%20me%20your%20booking%20link.%0A%0AName%3A%0AGolf%20experience%3A%0APreferred%20lesson%20type%3A%0A">Request Booking Link</a>
         </div>
       </div>
 
@@ -707,9 +694,6 @@
           <p>Remote instruction for students who want feedback from anywhere.</p>
           <ul class="service-list">
             <li>Online Swing Review</li>
-            <li>Video Analysis</li>
-            <li>Practice Guidance</li>
-            <li>Follow-Up Support</li>
           </ul>
         </article>
 
@@ -748,7 +732,7 @@
           clear communication, measurable progress, and a swing you can trust.
         </p>
         <div style="margin-top:14px;">
-          <a class="btn btn-primary" href="#contact">Start Your Training</a>
+          <a class="btn btn-primary" href="mailto:kygolfacademy@gmail.com?subject=Lesson%20Scheduling%20Request&body=Hi%20Kevin%2C%0A%0AI%27d%20like%20to%20schedule%20a%20lesson.%20Please%20send%20me%20your%20booking%20link.%0A%0AName%3A%0AGolf%20experience%3A%0APreferred%20lesson%20type%3A%0A">Request Booking Link</a>
         </div>
       </div>
     </div>
@@ -801,23 +785,23 @@
           <div class="contact-info">
             <span class="eyebrow">Contact</span>
             <h2 class="section-title" style="font-size:clamp(32px,4vw,48px);">
-              Book your next lesson.
+              Request a booking link.
             </h2>
             <p>
-              Reach out to schedule private instruction, ask about group lessons,
-              or learn which coaching option is the best fit for your game.
+              To help reduce spam and keep scheduling personal, please email first.
+              I’ll reply with the appropriate booking link and next available lesson options.
             </p>
           </div>
 
           <div class="contact-box">
             <p><strong>Email</strong></p>
-            <p><a href="mailto:kygolfacademy@gmail.com">kygolfacademy@gmail.com</a></p>
+            <p><a href="mailto:kygolfacademy@gmail.com?subject=Lesson%20Scheduling%20Request&body=Hi%20Kevin%2C%0A%0AI%27d%20like%20to%20schedule%20a%20lesson.%20Please%20send%20me%20your%20booking%20link.%0A%0AName%3A%0AGolf%20experience%3A%0APreferred%20lesson%20type%3A%0A">kygolfacademy@gmail.com</a></p>
 
             <p style="margin-top:18px;"><strong>Phone</strong></p>
             <p><a href="tel:+17039411061">(703) 941-1061</a></p>
 
-            <p style="margin-top:18px;"><strong>Location</strong></p>
-            <p>Pinecrest Golf Course, Alexandria, VA</p>
+            <p style="margin-top:18px;"><strong>Scheduling</strong></p>
+            <p>Email first to receive the booking link.</p>
           </div>
         </div>
       </div>
