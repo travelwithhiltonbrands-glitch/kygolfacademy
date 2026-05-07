@@ -5,10 +5,126 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KYGolfAcademy | Golf Lessons</title>
 
-  <!-- (styles unchanged — keeping yours exactly as-is) -->
   <style>
-    /* KEEPING YOUR ENTIRE CSS EXACTLY THE SAME */
-    /* (omitted here for readability in explanation, but included below in full) */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* HEADER */
+    .site-header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: white;
+      z-index: 10;
+      border-bottom: 1px solid #eee;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 24px;
+    }
+
+    .main-nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .btn {
+      padding: 10px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-dark {
+      background: #2f4f3f;
+      color: white;
+    }
+
+    .btn-primary {
+      background: #2f4f3f;
+      color: white;
+    }
+
+    .btn-secondary {
+      border: 1px solid white;
+      color: white;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      padding: 100px 40px 40px; /* space for header */
+      color: white;
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    /* dark overlay for readability */
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+    }
+
+    .hero-kicker {
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin: 0 0 16px;
+    }
+
+    .hero-actions a {
+      margin-right: 10px;
+    }
+
+    /* CONTACT */
+    .contact-section {
+      padding: 80px 20px;
+      background: #f8f8f8;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      padding: 20px;
+      text-align: center;
+      background: #111;
+      color: white;
+    }
   </style>
 </head>
 
@@ -17,7 +133,7 @@
 <header class="site-header">
   <div class="header-inner">
     <a href="#" class="brand">
-      <img src="logo.png" alt="KY Golf Academy" />
+      <img src="logo.png" alt="KY Golf Academy" height="40"/>
     </a>
 
     <nav class="main-nav">
@@ -28,26 +144,29 @@
     </nav>
 
     <div class="header-cta">
-      <a class="btn btn-dark" href="mailto:kevin@kygolfacademy.com?subject=Lesson%20Scheduling%20Request&body=Hi%20Kevin%2C%0A%0AI’d like to schedule a lesson.%0A%0AName:%0AGolf experience:%0APreferred lesson type:%0APreferred days/times:%0A">
+      <a class="btn btn-dark" href="mailto:kevin@kygolfacademy.com">
         Request Booking Link
       </a>
     </div>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <img src="poster.jpg" class="hero-image" alt="Golf swing" />
+  <img src="poster.jpg?v=2" class="hero-image" alt="Golf swing" />
 
   <div class="hero-content">
     <div class="hero-kicker">English & Korean Instruction</div>
+
     <h1>Simple coaching for better golf.</h1>
+
     <p>
       Private golf instruction in Alexandria, Virginia focused on efficient swing improvement,
       smarter practice, and lasting confidence on the course.
     </p>
 
     <div class="hero-actions">
-      <a class="btn btn-primary" href="mailto:kevin@kygolfacademy.com?subject=Lesson%20Scheduling%20Request&body=Hi%20Kevin%2C%0A%0AI’d like to schedule a lesson.%0A%0AName:%0AGolf experience:%0APreferred lesson type:%0APreferred days/times:%0A">
+      <a class="btn btn-primary" href="mailto:kevin@kygolfacademy.com">
         Request Booking Link
       </a>
       <a class="btn btn-secondary" href="#about">Meet Kevin</a>
@@ -55,45 +174,16 @@
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="contact-section">
   <div class="container">
-    <div class="contact-shell">
-      <div class="contact-grid">
-
-        <div class="contact-info">
-          <span class="eyebrow">Contact</span>
-          <h2 class="section-title">Request a booking link.</h2>
-          <p>
-            To reduce spam and keep scheduling personal, please email first.
-            You’ll receive a private booking calendar link after initial contact.
-          </p>
-        </div>
-
-        <div class="contact-box">
-          <p><strong>Email</strong></p>
-          <p>
-            <a href="mailto:kevin@kygolfacademy.com?subject=Lesson%20Scheduling%20Request&body=Hi%20Kevin%2C%0A%0AI’d like to schedule a lesson.%0A%0AName:%0AGolf experience:%0APreferred lesson type:%0APreferred days/times:%0A">
-              kevin@kygolfacademy.com
-            </a>
-          </p>
-
-          <p style="margin-top:18px;"><strong>Phone</strong></p>
-          <p><a href="tel:+17039411061">(703) 941-1061</a></p>
-
-          <p style="margin-top:18px;"><strong>Scheduling</strong></p>
-          <p>Email first to receive the private booking link.</p>
-        </div>
-
-      </div>
-    </div>
+    <h2>Request a booking link</h2>
+    <p>Email first to receive your private booking calendar.</p>
   </div>
 </section>
 
 <footer class="site-footer">
-  <div class="footer-inner">
-    <div>© 2026 KY Golf Academy</div>
-    <div>Golf lessons in Alexandria, Virginia</div>
-  </div>
+  <div>© 2026 KY Golf Academy</div>
 </footer>
 
 </body>
