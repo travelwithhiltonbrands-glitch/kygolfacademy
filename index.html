@@ -80,7 +80,7 @@
       opacity:.75;
     }
 
-    /* HERO - GREEN LEFT + VIDEO RIGHT */
+    /* HERO - GREEN LEFT + CROPPED VIDEO RIGHT */
     .hero{
       min-height:86vh;
       display:grid;
@@ -144,12 +144,17 @@
       min-height:86vh;
       overflow:hidden;
       background:#111;
+      position:relative;
     }
 
     .hero-video-wrap video{
-      width:100%;
+      position:absolute;
+      top:0;
+      left:0;
+      width:200%;
       height:100%;
       object-fit:cover;
+      transform:translateX(-50%);
       display:block;
     }
 
@@ -459,8 +464,8 @@
   </div>
 
   <div class="hero-video-wrap">
-    <video autoplay muted loop playsinline poster="./poster.jpg">
-      <source src="./swing.mp4" type="video/mp4" />
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="./swing.mp4?v=30" type="video/mp4" />
     </video>
   </div>
 </section>
@@ -603,7 +608,7 @@
 <section id="contact">
   <div class="contact-inner">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:kevin@kygolfacademy.com">kevin@kygolfacademy.com</a></p>
+    <p>Email: <a href="mailto:kygolfacademy@gmail.com">kygolfacademy@gmail.com</a></p>
     <p>Phone: <a href="tel:+17039411061">(703) 941-1061</a></p>
   </div>
 </section>
