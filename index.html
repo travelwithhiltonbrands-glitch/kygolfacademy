@@ -31,9 +31,9 @@
       margin: auto;
     }
 
-    .brand {
-      font-weight: bold;
-      font-size: 18px;
+    .brand img {
+      height: 40px;
+      display: block;
     }
 
     .main-nav a {
@@ -103,22 +103,31 @@
       margin-top: 20px;
     }
 
-    .hero-actions a {
-      margin-right: 10px;
-    }
-
     /* SECTION */
     .section {
       padding: 80px 24px;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
     }
 
     h2 {
       margin-bottom: 16px;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-grid img {
+      width: 100%;
+      border-radius: 12px;
     }
 
     /* CONTACT */
@@ -134,6 +143,17 @@
       color: white;
       font-size: 14px;
     }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+    }
   </style>
 </head>
 
@@ -141,7 +161,12 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <div class="brand">KY Golf Academy</div>
+    
+    <div class="brand">
+      <a href="#">
+        <img src="./logo.png" alt="KY Golf Academy" />
+      </a>
+    </div>
 
     <nav class="main-nav">
       <a href="#about">About</a>
@@ -179,11 +204,22 @@
 <!-- ABOUT -->
 <section id="about" class="section">
   <div class="container">
-    <h2>About</h2>
-    <p>
-      Personalized golf instruction designed to simplify your swing and build consistency.
-      Lessons are tailored to your level, goals, and practice habits.
-    </p>
+    <div class="about-grid">
+      
+      <div>
+        <h2>Meet Kevin</h2>
+        <p>
+          Kevin provides personalized golf instruction focused on simplifying your swing
+          and building long-term consistency. Lessons are tailored to each golfer’s goals
+          and experience level.
+        </p>
+      </div>
+
+      <div>
+        <img src="./profile.jpg" alt="Coach Kevin" />
+      </div>
+
+    </div>
   </div>
 </section>
 
