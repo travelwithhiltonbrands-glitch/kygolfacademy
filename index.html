@@ -1,25 +1,85 @@
 <!doctype html>
 <html>
 <head>
-  <title>KY Golf Academy Test</title>
+  <title>KY Golf Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <style>
     body {
       margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* HERO */
+    .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
-      justify-content: center;
+      padding: 80px 40px;
       background: #2f4f3f;
       color: white;
-      font-family: Arial, sans-serif;
+    }
+
+    .hero-content {
+      max-width: 600px;
     }
 
     h1 {
       font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      border-radius: 20px;
+      background: white;
+      color: #2f4f3f;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* SECTION */
+    .section {
+      padding: 80px 40px;
+      background: #f8f8f8;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
     }
   </style>
 </head>
+
 <body>
-  <h1>DEPLOYMENT TEST WORKING</h1>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Simple coaching for better golf.</h1>
+    <p>
+      Private golf instruction in Alexandria, Virginia focused on efficient swing improvement,
+      smarter practice, and lasting confidence on the course.
+    </p>
+
+    <a class="btn" href="mailto:kevin@kygolfacademy.com">
+      Request Booking Link
+    </a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>About</h2>
+    <p>English & Korean instruction. Personalized coaching for all levels.</p>
+  </div>
+</section>
+
 </body>
 </html>
