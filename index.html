@@ -15,7 +15,7 @@
 
     body{
       margin:0;
-      font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      font-family:-apple-system, BlinkMacSystemFont, Arial, sans-serif;
       background:var(--green);
       color:var(--text);
     }
@@ -24,8 +24,8 @@
     .site-header{
       position:sticky;
       top:0;
-      z-index:10;
       background:var(--green);
+      z-index:10;
       border-bottom:1px solid rgba(255,255,255,.15);
     }
 
@@ -35,15 +35,13 @@
       padding:18px 24px;
       display:flex;
       justify-content:space-between;
-      align-items:center;
     }
 
     .brand{
       color:var(--cream);
-      letter-spacing:1.5px;
       font-size:14px;
+      letter-spacing:1.5px;
       text-transform:uppercase;
-      font-weight:600;
     }
 
     .main-nav{
@@ -64,7 +62,6 @@
       display:flex;
       align-items:center;
       color:white;
-
       background:
         linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
         url("./poster.jpg");
@@ -95,7 +92,6 @@
       background:var(--cream);
       color:var(--green);
       text-decoration:none;
-      font-weight:600;
       font-size:14px;
     }
 
@@ -104,9 +100,7 @@
     }
 
     /* ABOUT */
-    #about{
-      background:var(--cream);
-    }
+    #about{ background:var(--cream); }
 
     .about-layout{
       max-width:1200px;
@@ -125,14 +119,12 @@
 
     .about-text p{
       margin-bottom:16px;
-      color:#444;
       line-height:1.7;
+      color:#444;
     }
 
     /* LESSONS */
-    #lessons{
-      background:var(--soft);
-    }
+    #lessons{ background:var(--soft); }
 
     .lessons-inner{
       max-width:1200px;
@@ -158,29 +150,16 @@
     }
 
     .lesson-col h3{
-      margin-bottom:12px;
       color:var(--green);
-    }
-
-    .lesson-col p{
-      margin:6px 0;
-      color:#555;
+      margin-bottom:12px;
     }
 
     /* PRICING */
-    #pricing{
-      background:var(--cream);
-    }
+    #pricing{ background:var(--cream); }
 
     .pricing-inner{
       max-width:1200px;
       margin:auto;
-    }
-
-    .pricing-note{
-      color:#555;
-      max-width:650px;
-      margin-bottom:32px;
     }
 
     .pricing-grid{
@@ -197,44 +176,40 @@
 
     .price-card h3{
       color:var(--green);
-      margin-top:0;
     }
 
     .price-card p{
       display:flex;
       justify-content:space-between;
-      border-bottom:1px solid #eee;
-      padding-bottom:8px;
       color:#555;
     }
 
-    .price-card strong{
-      color:var(--green);
-    }
-
     /* LOCATION */
-    #location{
-      background:var(--cream);
+    #location{ background:var(--cream); }
+
+    .location-inner{
+      max-width:1200px;
+      margin:auto;
     }
 
     .location-grid{
-      max-width:1200px;
-      margin:auto;
       display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:40px;
+      grid-template-columns:repeat(3,1fr);
+      gap:24px;
+      margin-bottom:30px;
+    }
+
+    .location-card{
+      background:white;
+      padding:20px;
+      border-radius:16px;
     }
 
     .location-map iframe{
       width:100%;
       height:320px;
-      border-radius:12px;
       border:0;
-    }
-
-    h2{
-      color:var(--green);
-      margin-bottom:16px;
+      border-radius:16px;
     }
 
     /* CONTACT */
@@ -257,7 +232,6 @@
       padding:20px;
       background:var(--green);
       color:rgba(255,255,255,.7);
-      font-size:13px;
     }
 
     @media(max-width:768px){
@@ -266,10 +240,6 @@
       .pricing-grid,
       .location-grid{
         grid-template-columns:1fr;
-      }
-
-      h1{
-        font-size:38px;
       }
     }
 
@@ -281,7 +251,6 @@
 <header class="site-header">
   <div class="header-inner">
     <div class="brand">KY Golf Academy</div>
-
     <nav class="main-nav">
       <a href="#about">About</a>
       <a href="#lessons">Lessons</a>
@@ -295,10 +264,7 @@
 <section class="hero">
   <div class="hero-inner">
     <h1>Simple coaching for better golf.</h1>
-    <p>
-      Private golf instruction in Alexandria, Virginia focused on efficient swing improvement,
-      smarter practice, and lasting confidence.
-    </p>
+    <p>Private golf instruction focused on efficient improvement and confidence.</p>
     <a class="btn" href="#contact">Book a Lesson</a>
   </div>
 </section>
@@ -306,16 +272,22 @@
 <section id="about">
   <div class="about-layout">
     <div class="about-photo">
-      <img src="./profile.jpg" alt="Kevin Yoon" />
+      <img src="./profile.jpg" alt="Kevin Yoon">
       <a class="btn" href="#contact">Book a Lesson</a>
     </div>
 
     <div class="about-text">
       <p>Hi, I’m Kevin Yoon, a golf professional at Pinecrest Golf Course. For over a decade, my goal has been simple: to make learning golf easier and more enjoyable.</p>
 
-      <p>My coaching approach isn’t the traditional one. I bring an engineering background and analytical mindset to help golfers understand their swing and improve more efficiently while keeping drills and concepts simple and easy to apply for players of all ages.</p>
+      <p>My coaching approach isn’t the traditional one. I bring an engineering background and analytical mindset to help golfers understand their swing and improve more efficiently while keeping drills simple and easy to apply.</p>
 
       <p>I grew up in Blacksburg, Virginia...</p>
+
+      <p>I earned multiple tournament finishes and competed on a team that won three state championships.</p>
+
+      <p>I studied at George Washington University and Cornell University and became a certified instructor in 2010.</p>
+
+      <p>I now teach at Pinecrest Golf Course in Alexandria, Virginia.</p>
 
       <p>Everything I’ve built in golf has been possible with the full support of my loving mother.</p>
     </div>
@@ -325,60 +297,44 @@
 <section id="lessons">
   <div class="lessons-inner">
     <div class="lessons-intro">Better golf with simple coaching.</div>
-
     <div class="lessons-grid">
-      <div class="lesson-col">
-        <h3>In-Person</h3>
-        <p>Private Lessons</p>
-        <p>Semi-Private Lessons</p>
-      </div>
-
-      <div class="lesson-col">
-        <h3>Virtual</h3>
-        <p>Online Swing Review</p>
-      </div>
-
-      <div class="lesson-col">
-        <h3>Group</h3>
-        <p>Weekly clinics</p>
-      </div>
+      <div class="lesson-col"><h3>In-Person</h3></div>
+      <div class="lesson-col"><h3>Virtual</h3></div>
+      <div class="lesson-col"><h3>Group</h3></div>
     </div>
   </div>
 </section>
 
 <section id="pricing">
   <div class="pricing-inner">
-    <h2>Lesson Rates</h2>
-
-    <p class="pricing-note">
-      Rates follow Fairfax County / Pinecrest Golf Course guidelines and may change.
-    </p>
-
+    <h2>Pricing</h2>
     <div class="pricing-grid">
-      <div class="price-card">
-        <h3>Private</h3>
-        <p><span>30 min</span><strong>$50</strong></p>
-        <p><span>1 hour</span><strong>$90</strong></p>
-      </div>
-
-      <div class="price-card">
-        <h3>Semi-Private</h3>
-        <p><span>Per student</span><strong>$55</strong></p>
-      </div>
-
-      <div class="price-card">
-        <h3>TrackMan</h3>
-        <p><span>1 hour</span><strong>$110</strong></p>
-      </div>
+      <div class="price-card"><h3>Private</h3></div>
+      <div class="price-card"><h3>Semi</h3></div>
+      <div class="price-card"><h3>TrackMan</h3></div>
     </div>
   </div>
 </section>
 
 <section id="location">
-  <div class="location-grid">
-    <div>
-      <h2>Location</h2>
-      <p><strong>Pinecrest Golf Course</strong><br>Alexandria, VA</p>
+  <div class="location-inner">
+    <h2>Location</h2>
+
+    <div class="location-grid">
+      <div class="location-card">
+        <h3>Address</h3>
+        <p>Pinecrest Golf Course<br>Alexandria, VA</p>
+      </div>
+
+      <div class="location-card">
+        <h3>Hours</h3>
+        <p>By appointment<br>Weekdays & weekends</p>
+      </div>
+
+      <div class="location-card">
+        <h3>Info</h3>
+        <p>Public course<br>All skill levels welcome</p>
+      </div>
     </div>
 
     <div class="location-map">
@@ -390,7 +346,7 @@
 <section id="contact">
   <div class="contact-inner">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:kygolfacademy@gmail.com">kygolfacademy@gmail.com</a></p>
+    <p>Email: kygolfacademy@gmail.com</p>
     <p>Phone: (703) 941-1061</p>
   </div>
 </section>
