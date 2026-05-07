@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KYGolfAcademy | Golf Lessons</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* HEADER */
+    .site-header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: white;
+      z-index: 10;
+      border-bottom: 1px solid #eee;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 24px;
+    }
+
+    .main-nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .btn {
+      padding: 10px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-dark {
+      background: #2f4f3f;
+      color: white;
+    }
+
+    .btn-primary {
+      background: #2f4f3f;
+      color: white;
+    }
+
+    .btn-secondary {
+      border: 1px solid white;
+      color: white;
+    }
+
+    /* HERO (NO MEDIA — JUST COLOR) */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 100px 40px 40px;
+      background: #2f4f3f; /* your brand green */
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 600px;
+    }
+
+    .hero-kicker {
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin: 0 0 16px;
+    }
+
+    .hero-actions a {
+      margin-right: 10px;
+    }
+
+    /* CONTACT */
+    .contact-section {
+      padding: 80px 20px;
+      background: #f8f8f8;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      padding: 20px;
+      text-align: center;
+      background: #111;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div><strong>KY Golf Academy</strong></div>
+
+    <nav class="main-nav">
+      <a href="#about">About</a>
+      <a href="#lessons">Lessons</a>
+      <a href="#location">Location</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-cta">
+      <a class="btn btn-dark" href="mailto:kevin@kygolfacademy.com">
+        Request Booking Link
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-kicker">English & Korean Instruction</div>
+
+    <h1>Simple coaching for better golf.</h1>
+
+    <p>
+      Private golf instruction in Alexandria, Virginia focused on efficient swing improvement,
+      smarter practice, and lasting confidence on the course.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="mailto:kevin@kygolfacademy.com">
+        Request Booking Link
+      </a>
+      <a class="btn btn-secondary" href="#about">Meet Kevin</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2>Request a booking link</h2>
+    <p>Email first to receive your private booking calendar.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div>© 2026 KY Golf Academy</div>
+</footer>
+
+</body>
+</html>
