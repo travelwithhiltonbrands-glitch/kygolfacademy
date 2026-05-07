@@ -1,260 +1,165 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>KY Golf Academy — Coach</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KYGolfAcademy | Golf Lessons</title>
+
   <style>
-    body { 
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; 
-      margin: 0; 
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
     }
 
-    .page-wrap { max-width: 980px; margin: 0 auto; padding: 18px; }
-    .hero { border: 1px solid #e5e7eb; border-radius: 14px; padding: 16px; background: #f9fafb; }
-    h1 { margin: 0 0 8px; font-size: 22px; }
-    p { margin: 0; color: #4b5563; }
+    /* HEADER */
+    .site-header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: white;
+      z-index: 10;
+      border-bottom: 1px solid #eee;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 24px;
+    }
+
+    .main-nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .btn {
+      padding: 10px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-dark {
+      background: #2f4f3f;
+      color: white;
+    }
+
+    .btn-primary {
+      background: #2f4f3f;
+      color: white;
+    }
+
+    .btn-secondary {
+      border: 1px solid white;
+      color: white;
+    }
+
+    /* HERO (NO MEDIA — JUST COLOR) */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 100px 40px 40px;
+      background: #2f4f3f; /* your brand green */
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 600px;
+    }
+
+    .hero-kicker {
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin: 0 0 16px;
+    }
+
+    .hero-actions a {
+      margin-right: 10px;
+    }
+
+    /* CONTACT */
+    .contact-section {
+      padding: 80px 20px;
+      background: #f8f8f8;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      padding: 20px;
+      text-align: center;
+      background: #111;
+      color: white;
+    }
   </style>
 </head>
 
 <body>
-  <!-- ✅ Your normal coach page content -->
-  <div class="page-wrap">
-    <div class="hero">
-      <h1>KY Golf Academy — Coach Area</h1>
-      <p>This page is private. Use the Chat button bottom-right to ask questions based on Kevin’s golf library.</p>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div><strong>KY Golf Academy</strong></div>
+
+    <nav class="main-nav">
+      <a href="#about">About</a>
+      <a href="#lessons">Lessons</a>
+      <a href="#location">Location</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-cta">
+      <a class="btn btn-dark" href="mailto:kevin@kygolfacademy.com">
+        Request Booking Link
+      </a>
     </div>
   </div>
+</header>
 
-  <!-- ✅ Bottom-right popup chat widget (ONLY on /coach) -->
-  <div id="ky-chat-root">
-    <button id="ky-chat-fab" aria-label="Open Coach Chat">Chat</button>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-kicker">English & Korean Instruction</div>
 
-    <div id="ky-chat-panel" role="dialog" aria-modal="true" aria-label="Coach Chat">
-      <div id="ky-chat-header">
-        <div>
-          <div id="ky-chat-title">Coach Chat</div>
-          <div id="ky-chat-subtitle">Private • Kevin’s system only</div>
-        </div>
-        <button id="ky-chat-close" aria-label="Close">✕</button>
-      </div>
+    <h1>Simple coaching for better golf.</h1>
 
-      <div id="ky-chat-messages"></div>
+    <p>
+      Private golf instruction in Alexandria, Virginia focused on efficient swing improvement,
+      smarter practice, and lasting confidence on the course.
+    </p>
 
-      <form id="ky-chat-form">
-        <input id="ky-chat-input" placeholder="Ask about grip, setup, takeaway..." autocomplete="off" />
-        <button id="ky-chat-send" type="submit">Send</button>
-      </form>
-
-      <div id="ky-chat-status"></div>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="mailto:kevin@kygolfacademy.com">
+        Request Booking Link
+      </a>
+      <a class="btn btn-secondary" href="#about">Meet Kevin</a>
     </div>
   </div>
+</section>
 
-  <style>
-    /* Widget container */
-    #ky-chat-root {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 9999;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
-    }
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2>Request a booking link</h2>
+    <p>Email first to receive your private booking calendar.</p>
+  </div>
+</section>
 
-    /* Floating button */
-    #ky-chat-fab {
-      width: 56px;
-      height: 56px;
-      border-radius: 999px;
-      border: 0;
-      cursor: pointer;
-      background: #111827;
-      color: white;
-      font-weight: 800;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.18);
-    }
+<footer class="site-footer">
+  <div>© 2026 KY Golf Academy</div>
+</footer>
 
-    /* Panel */
-    #ky-chat-panel {
-      display: none;
-      width: min(360px, calc(100vw - 36px));
-      height: 520px;
-      margin-bottom: 12px;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.22);
-      overflow: hidden;
-    }
-
-    /* Header */
-    #ky-chat-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 12px;
-      background: #111827;
-      color: white;
-    }
-
-    #ky-chat-title { font-size: 14px; font-weight: 900; }
-    #ky-chat-subtitle { font-size: 12px; opacity: 0.85; margin-top: 2px; }
-
-    #ky-chat-close {
-      border: 0;
-      background: transparent;
-      color: white;
-      font-size: 18px;
-      cursor: pointer;
-      padding: 6px 8px;
-      border-radius: 10px;
-    }
-    #ky-chat-close:hover { background: rgba(255,255,255,0.12); }
-
-    /* Messages */
-    #ky-chat-messages {
-      height: calc(520px - 54px - 56px - 24px);
-      padding: 12px;
-      overflow-y: auto;
-      background: #f6f7f9;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .ky-msg {
-      max-width: 85%;
-      padding: 10px 12px;
-      border-radius: 14px;
-      white-space: pre-wrap;
-      line-height: 1.35;
-      font-size: 14px;
-    }
-    .ky-user { align-self: flex-end; background: #e7f0ff; }
-    .ky-bot  { align-self: flex-start; background: #ffffff; border: 1px solid #e5e7eb; }
-
-    .ky-meta {
-      font-size: 11px;
-      color: #6b7280;
-      margin-top: -6px;
-    }
-
-    /* Input */
-    #ky-chat-form {
-      display: flex;
-      gap: 8px;
-      padding: 10px;
-      background: white;
-      border-top: 1px solid #e5e7eb;
-    }
-    #ky-chat-input {
-      flex: 1;
-      border: 1px solid #d1d5db;
-      border-radius: 12px;
-      padding: 10px;
-      font-size: 14px;
-      outline: none;
-    }
-    #ky-chat-send {
-      border: 0;
-      background: #111827;
-      color: white;
-      border-radius: 12px;
-      padding: 10px 12px;
-      cursor: pointer;
-      font-weight: 800;
-    }
-    #ky-chat-send:disabled { opacity: 0.6; cursor: not-allowed; }
-
-    #ky-chat-status {
-      font-size: 11px;
-      color: #6b7280;
-      padding: 0 12px 10px 12px;
-      background: white;
-    }
-  </style>
-
-  <script>
-    const fab = document.getElementById('ky-chat-fab');
-    const panel = document.getElementById('ky-chat-panel');
-    const closeBtn = document.getElementById('ky-chat-close');
-
-    const msgBox = document.getElementById('ky-chat-messages');
-    const form = document.getElementById('ky-chat-form');
-    const input = document.getElementById('ky-chat-input');
-    const sendBtn = document.getElementById('ky-chat-send');
-    const statusEl = document.getElementById('ky-chat-status');
-
-    function addMsg(text, who, meta) {
-      const div = document.createElement('div');
-      div.className = `ky-msg ${who === 'user' ? 'ky-user' : 'ky-bot'}`;
-      div.textContent = text;
-      msgBox.appendChild(div);
-
-      if (meta) {
-        const m = document.createElement('div');
-        m.className = 'ky-meta';
-        m.textContent = meta;
-        msgBox.appendChild(m);
-      }
-
-      msgBox.scrollTop = msgBox.scrollHeight;
-    }
-
-    function openChat() {
-      panel.style.display = 'block';
-      fab.style.display = 'none';
-      input.focus();
-      if (!msgBox.dataset.started) {
-        msgBox.dataset.started = "1";
-        addMsg("Ask me anything from Kevin’s swing system.", "bot");
-      }
-    }
-
-    function closeChat() {
-      panel.style.display = 'none';
-      fab.style.display = 'inline-flex';
-    }
-
-    fab.addEventListener('click', openChat);
-    closeBtn.addEventListener('click', closeChat);
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && panel.style.display === 'block') closeChat();
-    });
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const question = input.value.trim();
-      if (!question) return;
-
-      addMsg(question, 'user');
-      input.value = '';
-      sendBtn.disabled = true;
-      statusEl.textContent = 'Thinking...';
-
-      try {
-        const res = await fetch('/api/chat', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ question })
-        });
-
-        const text = await res.text();
-        if (!res.ok) {
-          addMsg(`Error (${res.status}): ${text}`, 'bot');
-          return;
-        }
-
-        const data = JSON.parse(text);
-        addMsg(data.answer || '(no answer)', 'bot', data.citations?.length ? `Used: ${data.citations.join(', ')}` : '');
-      } catch (err) {
-        addMsg(`Error: ${err.message}`, 'bot');
-      } finally {
-        sendBtn.disabled = false;
-        statusEl.textContent = '';
-        input.focus();
-      }
-    });
-  </script>
 </body>
-</html>
+</html> 
