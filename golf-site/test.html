@@ -11,7 +11,7 @@
       font-family: Arial, sans-serif;
     }
 
-    /* HEADER */
+    /* ===== HEADER ===== */
     .site-header {
       position: fixed;
       width: 100%;
@@ -60,17 +60,35 @@
       color: white;
     }
 
-    /* HERO */
+    /* ===== HERO ===== */
     .hero {
       position: relative;
       min-height: 100vh;
       overflow: hidden;
+
+      /* FORCE IMAGE BACKGROUND */
+      background-image: url("./poster.jpg?v=999") !important;
+      background-size: cover !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+
       display: flex;
       align-items: center;
       padding: 100px 40px 40px;
       color: white;
     }
 
+    /* HARD KILL ANY VIDEO */
+    video,
+    .hero video,
+    .hero-video {
+      display: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+    }
+
+    /* IMAGE LAYER (backup) */
     .hero-image {
       position: absolute;
       inset: 0;
@@ -80,7 +98,7 @@
       z-index: 0;
     }
 
-    /* overlay for readability */
+    /* DARK OVERLAY */
     .hero::after {
       content: "";
       position: absolute;
@@ -111,7 +129,7 @@
       margin-right: 10px;
     }
 
-    /* CONTACT */
+    /* ===== CONTACT ===== */
     .contact-section {
       padding: 80px 20px;
       background: #f8f8f8;
@@ -122,7 +140,7 @@
       margin: auto;
     }
 
-    /* FOOTER */
+    /* ===== FOOTER ===== */
     .site-footer {
       padding: 20px;
       text-align: center;
@@ -157,8 +175,8 @@
 
 <!-- HERO -->
 <section class="hero">
-  <!-- ✅ IMAGE (no video anywhere) -->
-  <img src="./poster.jpg?v=5" class="hero-image" alt="Golf swing" />
+  <!-- image fallback layer -->
+  <img src="./poster.jpg?v=999" class="hero-image" alt="Golf swing" />
 
   <div class="hero-content">
     <div class="hero-kicker">English & Korean Instruction</div>
