@@ -3,303 +3,162 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>KY Golf Academy | Golf Lessons</title>
+  <title>KY Golf Academy</title>
 
   <style>
     :root {
       --green: #2f4f3f;
-      --green-dark: #1f352a;
       --cream: #f7f3ea;
       --soft: #f4f4ef;
       --text: #1f1f1f;
-    }
-
-    * {
-      box-sizing: border-box;
     }
 
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
       color: var(--text);
-      line-height: 1.6;
       background: var(--cream);
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     /* HEADER */
     .site-header {
       position: fixed;
-      top: 0;
       width: 100%;
-      z-index: 20;
-      background: rgba(247, 243, 234, 0.92);
+      top: 0;
+      background: rgba(247,243,234,0.95);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(47, 79, 63, 0.14);
+      z-index: 10;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
     }
 
     .header-inner {
-      max-width: 1120px;
+      max-width: 1100px;
       margin: auto;
-      padding: 18px 24px;
+      padding: 16px 24px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
     }
 
     .brand {
-      font-size: 15px;
-      letter-spacing: 1.8px;
+      letter-spacing: 1.5px;
+      font-size: 14px;
       text-transform: uppercase;
-      color: var(--green-dark);
-      font-weight: 600;
     }
 
     .main-nav a {
-      margin-left: 24px;
+      margin-left: 20px;
       text-decoration: none;
-      color: var(--green-dark);
+      color: #333;
       font-size: 14px;
     }
 
-    .main-nav a:hover {
-      opacity: 0.7;
-    }
-
-    /* HERO */
+    /* HERO (clean image) */
     .hero {
       min-height: 100vh;
-      padding: 150px 24px 90px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      color: white;
+      padding: 140px 24px 80px;
 
-      background-color: var(--green);
-      background-image: url("./poster.jpg");
+      background: url("./poster.jpg");
       background-size: cover;
       background-position: center;
-      background-blend-mode: multiply;
+
+      color: white;
+      display: flex;
+      align-items: center;
+      position: relative;
     }
 
+    /* subtle dark overlay (NOT green) */
     .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        linear-gradient(
-          90deg,
-          rgba(31, 53, 42, 0.9) 0%,
-          rgba(47, 79, 63, 0.72) 45%,
-          rgba(47, 79, 63, 0.3) 100%
-        );
+      background: rgba(0,0,0,0.35);
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
-      max-width: 1120px;
-      width: 100%;
+      max-width: 700px;
       margin: auto;
-    }
-
-    .hero-text {
-      max-width: 690px;
-    }
-
-    .hero-kicker {
-      font-size: 13px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-      color: rgba(255,255,255,0.82);
     }
 
     h1 {
-      font-size: clamp(42px, 7vw, 78px);
-      font-weight: 500;
-      line-height: 1.02;
-      letter-spacing: -2px;
-      margin: 0 0 26px;
+      font-size: 60px;
+      line-height: 1.1;
+      margin-bottom: 20px;
     }
 
     .hero p {
-      max-width: 560px;
       font-size: 20px;
-      color: rgba(255,255,255,0.88);
-      margin: 0;
-    }
-
-    .hero-actions {
-      margin-top: 34px;
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
+      max-width: 520px;
     }
 
     .btn {
+      margin-top: 24px;
       display: inline-block;
       padding: 14px 22px;
       border-radius: 999px;
+      background: white;
+      color: var(--green);
       text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
+      font-weight: 500;
     }
 
-    .btn-light {
-      background: var(--cream);
-      color: var(--green-dark);
-    }
-
-    .btn-outline {
+    /* GREEN SECTION (brand anchor) */
+    .green-section {
+      background: var(--green);
       color: white;
-      border: 1px solid rgba(255,255,255,0.55);
-    }
-
-    /* SECTIONS */
-    .section {
-      padding: 110px 24px;
+      padding: 100px 24px;
     }
 
     .container {
-      max-width: 1120px;
+      max-width: 900px;
       margin: auto;
     }
 
-    .section-label {
-      text-transform: uppercase;
-      letter-spacing: 1.8px;
-      color: var(--green);
-      font-size: 12px;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-
     h2 {
-      font-size: clamp(32px, 4vw, 48px);
-      font-weight: 500;
-      line-height: 1.12;
-      letter-spacing: -1px;
-      margin: 0 0 20px;
-      color: var(--green-dark);
+      font-size: 36px;
+      margin-bottom: 16px;
     }
 
     .muted {
-      color: #5d5d55;
+      opacity: 0.85;
       font-size: 18px;
-      max-width: 650px;
     }
 
     /* ABOUT */
     .about-grid {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 70px;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
       align-items: center;
     }
 
-    .profile-card {
-      background: var(--green);
-      padding: 14px;
-      border-radius: 26px;
-      box-shadow: 0 24px 70px rgba(31, 53, 42, 0.18);
-    }
-
-    .profile-card img {
+    .about-grid img {
       width: 100%;
-      display: block;
-      border-radius: 18px;
+      border-radius: 12px;
     }
 
-    /* LESSON CARDS */
+    /* LIGHT SECTION */
     .light {
       background: var(--soft);
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 36px;
-    }
-
-    .card {
-      background: var(--cream);
-      border: 1px solid rgba(47, 79, 63, 0.12);
-      border-radius: 24px;
-      padding: 28px;
-    }
-
-    .card h3 {
-      margin: 0 0 10px;
-      color: var(--green-dark);
-      font-size: 20px;
-      font-weight: 500;
-    }
-
-    .card p {
-      color: #666;
-      margin: 0;
-    }
-
-    /* CONTACT */
-    .contact-box {
-      background: var(--green-dark);
-      color: white;
-      border-radius: 30px;
-      padding: 48px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .contact-box h2 {
-      color: white;
-    }
-
-    .contact-box p,
-    .contact-box a {
-      color: rgba(255,255,255,0.85);
-    }
-
-    .contact-box a {
-      text-decoration: none;
+      padding: 100px 24px;
     }
 
     /* FOOTER */
     .site-footer {
-      padding: 34px 24px;
+      padding: 40px;
       text-align: center;
-      font-size: 13px;
-      color: #6c6c64;
-      background: var(--cream);
+      font-size: 14px;
+      color: #666;
     }
 
-    @media (max-width: 800px) {
-      .header-inner {
-        align-items: flex-start;
-        gap: 12px;
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 38px;
       }
 
-      .main-nav a {
-        margin-left: 12px;
-        font-size: 13px;
-      }
-
-      .hero {
-        padding-top: 130px;
-      }
-
-      .about-grid,
-      .contact-box {
-        grid-template-columns: 1fr;
-      }
-
-      .cards {
+      .about-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -320,101 +179,71 @@
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-text">
-      <div class="hero-kicker">English & Korean Instruction</div>
-      <h1>Simple coaching for better golf.</h1>
-      <p>
-        Private golf instruction in Alexandria, Virginia — focused on efficient swing improvement,
-        smarter practice, and lasting confidence.
-      </p>
+    <h1>Simple coaching for better golf.</h1>
 
-      <div class="hero-actions">
-        <a class="btn btn-light" href="mailto:kevin@kygolfacademy.com">
-          Request Booking Link
-        </a>
-        <a class="btn btn-outline" href="#about">
-          Meet Kevin
-        </a>
-      </div>
-    </div>
+    <p>
+      Private golf instruction focused on efficient swing improvement,
+      smarter practice, and lasting confidence.
+    </p>
+
+    <a class="btn" href="mailto:kevin@kygolfacademy.com">
+      Request Booking Link
+    </a>
   </div>
 </section>
 
-<section id="about" class="section">
+<!-- GREEN BRAND SECTION -->
+<section class="green-section">
+  <div class="container">
+    <h2>Calm. Clear. Repeatable.</h2>
+    <p class="muted">
+      A simple approach to golf that prioritizes understanding, not overthinking.
+    </p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="light">
   <div class="container">
     <div class="about-grid">
       <div>
-        <div class="section-label">About</div>
-        <h2>Personalized instruction with a calm, simple approach.</h2>
-        <p class="muted">
-          Kevin helps golfers understand their swing without overcomplicating the process.
-          Each lesson is tailored to your goals, experience level, and practice habits.
-        </p>
-      </div>
-
-      <div class="profile-card">
-        <img src="./profile.jpg" alt="Coach Kevin" />
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="lessons" class="section light">
-  <div class="container">
-    <div class="section-label">Lessons</div>
-    <h2>Built around real improvement.</h2>
-    <p class="muted">
-      One-on-one coaching for players who want clearer feedback, better practice,
-      and more confidence on the course.
-    </p>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Full Swing</h3>
-        <p>Improve contact, consistency, ball flight, and overall swing efficiency.</p>
-      </div>
-
-      <div class="card">
-        <h3>Short Game</h3>
-        <p>Develop better touch, control, and confidence around the green.</p>
-      </div>
-
-      <div class="card">
-        <h3>Practice Plan</h3>
-        <p>Leave with clear priorities and drills that fit your current game.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="section">
-  <div class="container">
-    <div class="contact-box">
-      <div>
-        <div class="section-label" style="color:rgba(255,255,255,0.65);">Contact</div>
-        <h2>Request a private booking link.</h2>
+        <h2>Meet Kevin</h2>
         <p>
-          Email first to receive Kevin’s private scheduling calendar.
+          Personalized instruction designed to simplify your swing and build consistency.
         </p>
       </div>
 
       <div>
-        <p><strong>Email</strong><br>
-          <a href="mailto:kevin@kygolfacademy.com">kevin@kygolfacademy.com</a>
-        </p>
-
-        <p><strong>Phone</strong><br>
-          <a href="tel:+17039411061">(703) 941-1061</a>
-        </p>
+        <img src="./profile.jpg" />
       </div>
     </div>
+  </div>
+</section>
+
+<!-- LESSONS -->
+<section id="lessons" class="light">
+  <div class="container">
+    <h2>Lessons</h2>
+    <p>
+      One-on-one coaching covering full swing, short game, and course strategy.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="green-section">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>Email: kevin@kygolfacademy.com</p>
+    <p>Phone: (703) 941-1061</p>
   </div>
 </section>
 
 <footer class="site-footer">
-  © 2026 KY Golf Academy · Alexandria, Virginia
+  © 2026 KY Golf Academy
 </footer>
 
 </body>
