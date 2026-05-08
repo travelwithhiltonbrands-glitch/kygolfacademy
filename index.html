@@ -80,7 +80,7 @@
       opacity:.75;
     }
 
-    /* HERO - GREEN LEFT + CROPPED VIDEO RIGHT */
+    /* HERO - GREEN LEFT + RIGHT-HALF VIDEO CROP */
     .hero{
       min-height:86vh;
       display:grid;
@@ -150,11 +150,11 @@
     .hero-video-wrap video{
       position:absolute;
       top:0;
-      left:0;
+      right:0;
       width:200%;
       height:100%;
       object-fit:cover;
-      transform:translateX(-50%);
+      object-position:right center;
       display:block;
     }
 
@@ -465,7 +465,7 @@
 
   <div class="hero-video-wrap">
     <video autoplay muted loop playsinline preload="auto">
-      <source src="./swing.mp4?v=30" type="video/mp4" />
+      <source src="./swing.mp4?v=50" type="video/mp4" />
     </video>
   </div>
 </section>
