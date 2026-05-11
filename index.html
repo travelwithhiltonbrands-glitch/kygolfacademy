@@ -8,38 +8,24 @@
   <style>
     :root{
       --green:#2f4f3f;
-      --green-dark:#20372c;
       --cream:#f7f3ea;
       --soft:#eee9dc;
       --text:#1f1f1f;
     }
 
-    *{
-      box-sizing:border-box;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
+    *{ box-sizing:border-box; }
 
     body{
       margin:0;
-      font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      font-family:-apple-system, BlinkMacSystemFont, Arial, sans-serif;
       background:var(--green);
       color:var(--text);
-      line-height:1.65;
-    }
-
-    img{
-      max-width:100%;
-      display:block;
     }
 
     /* HEADER */
     .site-header{
       position:sticky;
       top:0;
-      z-index:20;
       background:var(--green);
       border-bottom:1px solid rgba(255,255,255,.15);
     }
@@ -51,7 +37,6 @@
       display:flex;
       justify-content:space-between;
       align-items:center;
-      gap:20px;
     }
 
     .brand{
@@ -60,24 +45,13 @@
       letter-spacing:1.5px;
       text-transform:uppercase;
       font-weight:600;
-      white-space:nowrap;
-    }
-
-    .main-nav{
-      display:flex;
-      gap:22px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
     }
 
     .main-nav a{
       color:var(--cream);
       text-decoration:none;
+      margin-left:18px;
       font-size:14px;
-    }
-
-    .main-nav a:hover{
-      opacity:.75;
     }
 
     /* HERO */
@@ -85,213 +59,104 @@
       min-height:72vh;
       display:grid;
       grid-template-columns:1fr 1fr;
-      background:var(--green);
     }
 
     .hero-copy{
       padding:80px 64px;
+      color:var(--cream);
       display:flex;
       flex-direction:column;
       justify-content:center;
-      color:var(--cream);
-    }
-
-    .hero-copy-inner{
-      max-width:620px;
-      margin-left:auto;
-    }
-
-    .hero-kicker{
-      text-transform:uppercase;
-      letter-spacing:2px;
-      font-size:13px;
-      opacity:.78;
-      margin-bottom:18px;
     }
 
     h1{
-      font-size:clamp(42px,7vw,76px);
-      line-height:1.05;
-      letter-spacing:-1.8px;
-      font-weight:500;
-      margin:0 0 22px;
-    }
-
-    .hero-copy p{
-      font-size:20px;
-      max-width:540px;
-      margin:0;
-      opacity:.9;
+      font-size:64px;
+      margin-bottom:18px;
     }
 
     .btn{
-      display:inline-block;
-      margin-top:22px;
+      margin-top:20px;
       padding:12px 18px;
       border-radius:999px;
       background:var(--cream);
       color:var(--green);
       text-decoration:none;
-      font-size:14px;
       font-weight:600;
+      display:inline-block;
     }
 
-    .btn:hover{
-      opacity:.9;
-    }
-
+    /* ✅ FIXED VIDEO (cinematic, not awkward) */
     .hero-video-wrap{
       height:72vh;
       overflow:hidden;
-      background:var(--green);
+      padding:40px 40px 40px 0;
       display:flex;
       align-items:center;
-      justify-content:center;
     }
 
-    /* ✅ FIXED VIDEO (NO ZOOM) */
     .hero-video-wrap video{
       width:100%;
       height:100%;
-      object-fit:contain;
-      background:var(--green);
-      display:block;
+      object-fit:cover;
+      object-position:center center;
+      border-radius:4px;
+      opacity:.92;
     }
 
+    /* SECTION */
     section{
-      padding:86px 24px;
+      padding:80px 24px;
+      background:var(--cream);
     }
 
     h2{
       color:var(--green);
-      margin:0 0 18px;
-      font-size:36px;
-      line-height:1.15;
-      font-weight:500;
-    }
-
-    /* ABOUT */
-    #about{
-      background:var(--cream);
-    }
-
-    .about-layout{
-      max-width:1200px;
-      margin:auto;
-      display:grid;
-      grid-template-columns:260px 1fr;
-      gap:44px;
-      align-items:start;
-    }
-
-    .about-photo img{
-      width:100%;
-      height:380px;
-      object-fit:cover;
-      border-radius:16px;
-      box-shadow:0 18px 55px rgba(31,53,42,.16);
-    }
-
-    .about-text p{
-      margin:0 0 16px;
-      color:#444;
-      line-height:1.7;
-    }
-
-    /* LESSONS */
-    #lessons{
-      background:var(--soft);
-    }
-
-    .lessons-inner{
-      max-width:1200px;
-      margin:auto;
-    }
-
-    .lessons-intro{
-      font-size:clamp(30px,4vw,44px);
-      margin-bottom:40px;
-      color:var(--green);
-    }
-
-    .lessons-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:24px;
-    }
-
-    .lesson-col{
-      background:white;
-      padding:26px;
-      border-radius:16px;
-    }
-
-    /* PRICING */
-    #pricing{
-      background:var(--cream);
-    }
-
-    .pricing-inner{
-      max-width:1200px;
-      margin:auto;
-    }
-
-    .pricing-note{
-      color:#555;
-      max-width:740px;
-      margin:0 0 34px;
     }
 
     .pricing-note a{
       color:var(--green);
       text-decoration:underline;
-      text-underline-offset:3px;
     }
 
-    .pricing-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:24px;
-    }
+    /* MOBILE */
+    @media(max-width:900px){
+      .hero{
+        grid-template-columns:1fr;
+      }
 
-    .price-card{
-      background:white;
-      padding:26px;
-      border-radius:16px;
-    }
+      .hero-copy{
+        padding:60px 24px;
+      }
 
-    /* LOCATION */
-    #location{
-      background:var(--soft);
-    }
-
-    .location-map iframe{
-      width:100%;
-      height:340px;
-      border:0;
-      border-radius:16px;
-    }
-
-    /* CONTACT */
-    #contact{
-      background:var(--green);
-      color:var(--cream);
-    }
-
-    footer{
-      text-align:center;
-      padding:24px;
-      color:rgba(255,255,255,.7);
+      .hero-video-wrap{
+        height:45vh;
+        padding:0 24px 40px;
+      }
     }
   </style>
 </head>
 
 <body>
 
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">KY Golf Academy</div>
+    <nav class="main-nav">
+      <a href="#about">About</a>
+      <a href="#lessons">Lessons</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
 <section class="hero">
   <div class="hero-copy">
-    <div class="hero-copy-inner">
-      <div class="hero-kicker">English & Korean Instruction</div>
+    <div>
+      <div style="opacity:.7; letter-spacing:2px; font-size:13px;">
+        ENGLISH & KOREAN INSTRUCTION
+      </div>
+
       <h1>Simple coaching for better golf.</h1>
 
       <p>
@@ -299,16 +164,40 @@
         smarter practice, and lasting confidence.
       </p>
 
-      <a class="btn" href="#contact">Book a Lesson</a>
+      <a class="btn" href="#contact">Request a Lesson</a>
     </div>
   </div>
 
   <div class="hero-video-wrap">
-    <video autoplay muted loop playsinline preload="auto">
-      <source src="./swing.mp4?v=70" type="video/mp4" />
+    <video autoplay muted loop playsinline>
+      <source src="./swing.mp4" type="video/mp4" />
     </video>
   </div>
 </section>
+
+<section id="pricing">
+  <h2>Lesson Rates</h2>
+
+  <p class="pricing-note">
+    Lesson rates are based on
+    <a href="https://www.fairfaxcounty.gov/parks/golf/pinecrest/instruction" target="_blank">
+      Fairfax County / Pinecrest Golf Course
+    </a>
+    published pricing and may change.
+  </p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>
+    Email:
+    <a href="mailto:kevin@kygolfacademy.com">kevin@kygolfacademy.com</a>
+  </p>
+</section>
+
+<footer style="text-align:center; padding:20px; color:white;">
+  © 2026 KY Golf Academy
+</footer>
 
 </body>
 </html>
