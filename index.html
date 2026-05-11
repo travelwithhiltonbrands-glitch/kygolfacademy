@@ -14,13 +14,9 @@
       --text:#1f1f1f;
     }
 
-    *{
-      box-sizing:border-box;
-    }
+    *{ box-sizing:border-box; }
 
-    html{
-      scroll-behavior:smooth;
-    }
+    html{ scroll-behavior:smooth; }
 
     body{
       margin:0;
@@ -30,12 +26,8 @@
       line-height:1.65;
     }
 
-    img{
-      max-width:100%;
-      display:block;
-    }
+    img{ max-width:100%; display:block; }
 
-    /* HEADER */
     .site-header{
       position:sticky;
       top:0;
@@ -60,14 +52,12 @@
       letter-spacing:1.5px;
       text-transform:uppercase;
       font-weight:600;
-      white-space:nowrap;
     }
 
     .main-nav{
       display:flex;
       gap:22px;
       flex-wrap:wrap;
-      justify-content:flex-end;
     }
 
     .main-nav a{
@@ -76,16 +66,10 @@
       font-size:14px;
     }
 
-    .main-nav a:hover{
-      opacity:.75;
-    }
-
-    /* HERO - GREEN LEFT + VIDEO RIGHT */
     .hero{
       min-height:72vh;
       display:grid;
       grid-template-columns:1fr 1fr;
-      background:var(--green);
     }
 
     .hero-copy{
@@ -101,27 +85,9 @@
       margin-left:auto;
     }
 
-    .hero-kicker{
-      text-transform:uppercase;
-      letter-spacing:2px;
-      font-size:13px;
-      opacity:.78;
-      margin-bottom:18px;
-    }
-
     h1{
       font-size:clamp(42px,7vw,76px);
-      line-height:1.05;
-      letter-spacing:-1.8px;
-      font-weight:500;
       margin:0 0 22px;
-    }
-
-    .hero-copy p{
-      font-size:20px;
-      max-width:540px;
-      margin:0;
-      opacity:.9;
     }
 
     .btn{
@@ -136,296 +102,24 @@
       font-weight:600;
     }
 
-    .btn:hover{
-      opacity:.9;
-    }
-
-    .hero-video-wrap{
-      height:72vh;
-      overflow:hidden;
-      background:var(--green);
-    }
-
-    .hero-video-wrap video{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      object-position:center center;
-      display:block;
-    }
-
-    section{
-      padding:86px 24px;
-    }
+    section{ padding:86px 24px; }
 
     h2{
       color:var(--green);
-      margin:0 0 18px;
+      margin-bottom:18px;
       font-size:36px;
-      line-height:1.15;
-      font-weight:500;
     }
 
-    /* ABOUT */
-    #about{
-      background:var(--cream);
-    }
-
-    .about-layout{
-      max-width:1200px;
-      margin:auto;
-      display:grid;
-      grid-template-columns:260px 1fr;
-      gap:44px;
-      align-items:start;
-    }
-
-    .about-photo img{
-      width:100%;
-      height:380px;
-      object-fit:cover;
-      border-radius:16px;
-      box-shadow:0 18px 55px rgba(31,53,42,.16);
-    }
-
-    .about-text p{
-      margin:0 0 16px;
-      color:#444;
-      line-height:1.7;
-    }
-
-    /* LESSONS */
-    #lessons{
-      background:var(--soft);
-    }
-
-    .lessons-inner{
-      max-width:1200px;
-      margin:auto;
-    }
-
-    .lessons-intro{
-      font-size:clamp(30px,4vw,44px);
-      line-height:1.15;
-      margin-bottom:40px;
-      color:var(--green);
-      font-weight:500;
-    }
-
-    .lessons-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:24px;
-    }
-
-    .lesson-col{
-      background:white;
-      padding:26px;
-      border-radius:16px;
-      border:1px solid rgba(47,79,63,.1);
-    }
-
-    .lesson-col h3{
-      margin:0 0 14px;
-      color:var(--green);
-      font-size:21px;
-      font-weight:500;
-    }
-
-    .lesson-col p{
-      margin:8px 0;
-      color:#555;
-    }
-
-    /* PRICING */
-    #pricing{
-      background:var(--cream);
-    }
-
-    .pricing-inner{
-      max-width:1200px;
-      margin:auto;
-    }
-
-    .pricing-note{
-      color:#555;
-      max-width:740px;
-      margin:0 0 34px;
-      line-height:1.7;
-    }
-
-    .pricing-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:24px;
-    }
-
-    .price-card{
-      background:white;
-      padding:26px;
-      border-radius:16px;
-      border:1px solid rgba(47,79,63,.1);
-    }
-
-    .price-card h3{
-      color:var(--green);
-      margin:0 0 16px;
-      font-size:21px;
-      font-weight:500;
-    }
-
-    .price-card p{
-      display:flex;
-      justify-content:space-between;
-      gap:18px;
-      margin:0;
-      padding:11px 0;
-      border-bottom:1px solid #eee;
-      color:#555;
-    }
-
-    .price-card p:last-child{
-      border-bottom:0;
-    }
-
-    .price-card strong{
-      color:var(--green);
-      white-space:nowrap;
-      font-weight:600;
-    }
-
-    .pricing-small{
-      color:#666;
-      font-size:14px;
-      margin-top:18px;
-    }
-
-    /* LOCATION */
-    #location{
-      background:var(--soft);
-    }
-
-    .location-inner{
-      max-width:1200px;
-      margin:auto;
-    }
-
-    .location-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:24px;
-      margin-bottom:32px;
-    }
-
-    .location-card{
-      background:white;
-      padding:24px;
-      border-radius:16px;
-      border:1px solid rgba(47,79,63,.1);
-    }
-
-    .location-card h3{
-      color:var(--green);
-      margin:0 0 12px;
-      font-size:20px;
-      font-weight:500;
-    }
-
-    .location-card p,
-    .location-card li{
-      color:#555;
-    }
-
-    .location-card ul{
-      padding-left:20px;
-      margin-bottom:0;
-    }
-
-    .location-map iframe{
-      width:100%;
-      height:340px;
-      border:0;
-      border-radius:16px;
-      display:block;
-    }
-
-    /* CONTACT */
-    #contact{
-      background:var(--green);
-      color:var(--cream);
-    }
-
-    .contact-inner{
-      max-width:900px;
-      margin:auto;
-    }
-
-    #contact h2{
-      color:var(--cream);
-    }
-
-    #contact a{
-      color:var(--cream);
-    }
+    #about{ background:var(--cream); }
+    #lessons{ background:var(--soft); }
+    #pricing{ background:var(--cream); }
+    #location{ background:var(--soft); }
+    #contact{ background:var(--green); color:var(--cream); }
 
     footer{
       text-align:center;
-      padding:24px 20px;
-      background:var(--green);
+      padding:24px;
       color:rgba(255,255,255,.7);
-      font-size:13px;
-    }
-
-    @media(max-width:900px){
-      .hero{
-        grid-template-columns:1fr;
-      }
-
-      .hero-copy{
-        padding:90px 24px 60px;
-      }
-
-      .hero-copy-inner{
-        margin-left:0;
-      }
-
-      .hero-video-wrap{
-        height:45vh;
-      }
-
-      .about-layout,
-      .lessons-grid,
-      .pricing-grid,
-      .location-grid{
-        grid-template-columns:1fr;
-      }
-
-      .about-photo{
-        max-width:260px;
-      }
-    }
-
-    @media(max-width:640px){
-      .header-inner{
-        flex-direction:column;
-        align-items:flex-start;
-      }
-
-      .main-nav{
-        gap:14px;
-      }
-
-      .main-nav a{
-        font-size:13px;
-      }
-
-      h1{
-        font-size:40px;
-      }
-
-      section{
-        padding:68px 20px;
-      }
     }
   </style>
 </head>
@@ -435,7 +129,6 @@
 <header class="site-header">
   <div class="header-inner">
     <div class="brand">KY Golf Academy</div>
-
     <nav class="main-nav">
       <a href="#about">About</a>
       <a href="#lessons">Lessons</a>
@@ -449,168 +142,29 @@
 <section class="hero">
   <div class="hero-copy">
     <div class="hero-copy-inner">
-      <div class="hero-kicker">English & Korean Instruction</div>
       <h1>Simple coaching for better golf.</h1>
-      <p>
-        Private golf instruction in Alexandria, Virginia focused on efficient swing improvement,
-        smarter practice, and lasting confidence.
-      </p>
-      <a class="btn" href="#contact">Book a Lesson</a>
-    </div>
-  </div>
+      <p>Private golf instruction in Alexandria, Virginia.</p>
 
-  <div class="hero-video-wrap">
-    <video autoplay muted loop playsinline preload="auto">
-      <source src="./swing.mp4?v=70" type="video/mp4" />
-    </video>
+      <!-- UPDATED -->
+      <a class="btn" href="booking.html">Book a Lesson</a>
+    </div>
   </div>
 </section>
 
 <section id="about">
-  <div class="about-layout">
-    <div class="about-photo">
-      <img src="./profile.jpg" alt="Kevin Yoon" />
-      <a class="btn" href="#contact">Book a Lesson</a>
-    </div>
+  <h2>About</h2>
 
-    <div class="about-text">
-      <p>Hi, I’m Kevin Yoon, a golf professional at Pinecrest Golf Course. For over a decade, my goal has been simple: to make learning golf easier and more enjoyable.</p>
-
-      <p>My coaching approach isn’t the traditional one. I bring an engineering background and analytical mindset to help golfers understand their swing and improve more efficiently while keeping drills and concepts simple and easy to apply for players of all ages.</p>
-
-      <p>I grew up in Blacksburg, Virginia, a small college town in the Blue Ridge Mountains. At age 17, I was introduced to golf by one of my closest friends and met PGA Professional Steve Prater, who became one of the most influential mentors in my life. His encouragement and guidance went far beyond golf—he taught me invaluable lessons about life as well. From that moment on, I was hooked.</p>
-
-      <p>Within a year, I became a single-digit handicap player and earned multiple top-10 finishes in tournaments across the nation. In high school, I joined the varsity golf team alongside several outstanding players, all coached by Steve. Together, we went on to win three consecutive Virginia state championships.</p>
-
-      <p>My path ultimately led me toward education, and I pursued business and engineering degrees from George Washington University and Cornell University. Despite this, my passion for golf never faded. In 2010, I earned my teaching license from the United States Golf Teachers Federation and have remained in good standing ever since.</p>
-
-      <p>I am currently a teaching professional at Pinecrest Golf Course in Alexandria, Virginia. I combine my playing experience with my engineering and analytical background to help students understand not just what they do in their golf swing, but why they do it.</p>
-
-      <p>I approach coaching in a systematic, logical way that helps golfers learn more efficiently and confidently. I look forward to the opportunity to share my knowledge and passion for the game with you. I offer lessons in both English and Korean.</p>
-
-      <p>Everything I’ve built in golf has been possible with the full support of my loving mother, whose encouragement has been a constant throughout my journey.</p>
-    </div>
-  </div>
-</section>
-
-<section id="lessons">
-  <div class="lessons-inner">
-    <div class="lessons-intro">Better golf with simple coaching.</div>
-
-    <div class="lessons-grid">
-      <div class="lesson-col">
-        <h3>In-Person</h3>
-        <p>Private Lessons</p>
-        <p>Semi-Private Lessons</p>
-        <p>TrackMan Analysis</p>
-        <p>Field Lessons</p>
-      </div>
-
-      <div class="lesson-col">
-        <h3>Virtual Lessons</h3>
-        <p>Online Swing Review</p>
-        <p>Clear feedback on swing videos</p>
-        <p>Practice recommendations</p>
-      </div>
-
-      <div class="lesson-col">
-        <h3>Group Lesson Schedule</h3>
-        <p>Weekly clinics</p>
-        <p>Junior instruction</p>
-        <p>Small-group learning</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="pricing">
-  <div class="pricing-inner">
-    <h2>Lesson Rates</h2>
-    <p class="pricing-note">
-      Lesson rates are based on Fairfax County / Pinecrest Golf Course published pricing and may change.
-      Semi-private lessons are offered for up to 3 students.
-    </p>
-
-    <div class="pricing-grid">
-      <div class="price-card">
-        <h3>Private Lessons</h3>
-        <p><span>1/2 Hour Lesson</span><strong>$50</strong></p>
-        <p><span>1/2 Hour - 5 Lessons</span><strong>$250</strong></p>
-        <p><span>1 Hour Lesson</span><strong>$90</strong></p>
-        <p><span>1 Hour - 5 Lessons</span><strong>$405</strong></p>
-      </div>
-
-      <div class="price-card">
-        <h3>Semi-Private</h3>
-        <p><span>1 Hour Lesson</span><strong>$55/student</strong></p>
-        <p><span>Group Size</span><strong>Up to 3 students</strong></p>
-      </div>
-
-      <div class="price-card">
-        <h3>TrackMan 4 Simulator</h3>
-        <p><span>1 Hour Rental</span><strong>$110</strong></p>
-        <p><span>3 Lesson Package</span><strong>$310</strong></p>
-        <p><span>5 Lesson Package</span><strong>$495</strong></p>
-      </div>
-    </div>
-
-    <p class="pricing-small">
-      Fairfax County notes a free golf round for 5-lesson packages.
-    </p>
-  </div>
-</section>
-
-<section id="location">
-  <div class="location-inner">
-    <h2>Location</h2>
-
-    <div class="location-grid">
-      <div class="location-card">
-        <h3>Pinecrest Golf Course</h3>
-        <p>
-          6600 Little River Turnpike<br>
-          Alexandria, VA 22312
-        </p>
-      </div>
-
-      <div class="location-card">
-        <h3>Lesson Hours</h3>
-        <p>
-          Lessons by appointment<br>
-          Weekdays &amp; weekends
-        </p>
-      </div>
-
-      <div class="location-card">
-        <h3>Course Info</h3>
-        <ul>
-          <li>Public course</li>
-          <li>Short game practice area</li>
-          <li>All skill levels welcome</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="location-map">
-      <iframe
-        src="https://www.google.com/maps?q=Pinecrest%20Golf%20Course%20Alexandria%20VA&output=embed"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </div>
+  <!-- UPDATED -->
+  <a class="btn" href="booking.html">Book a Lesson</a>
 </section>
 
 <section id="contact">
-  <div class="contact-inner">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:kygolfacademy@gmail.com">kygolfacademy@gmail.com</a></p>
-    <p>Phone: <a href="tel:+17039411061">(703) 941-1061</a></p>
-  </div>
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:kygolfacademy@gmail.com">kygolfacademy@gmail.com</a></p>
 </section>
 
 <footer>
-  © 2026 KY Golf Academy · Alexandria, Virginia
+  © 2026 KY Golf Academy
 </footer>
 
 </body>
