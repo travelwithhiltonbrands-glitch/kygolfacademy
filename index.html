@@ -84,8 +84,9 @@
     .hero{
       min-height:72vh;
       display:grid;
-      grid-template-columns:1fr 1fr;
+      grid-template-columns:0.95fr 1.25fr;
       background:var(--green);
+      align-items:center;
     }
 
     .hero-copy{
@@ -141,16 +142,18 @@
     }
 
     .hero-video-wrap{
-      height:72vh;
+      height:62vh;
       overflow:hidden;
       background:var(--green);
+      align-self:center;
+      margin-top:36px;
     }
 
     .hero-video-wrap video{
       width:100%;
       height:100%;
       object-fit:cover;
-      object-position:center 42%;
+      object-position:center center;
       display:block;
     }
 
@@ -402,7 +405,8 @@
       }
 
       .hero-video-wrap{
-        height:45vh;
+        height:42vh;
+        margin-top:0;
       }
 
       .about-layout,
