@@ -86,14 +86,16 @@
     .hero{
       min-height:72vh;
       display:grid;
-      grid-template-columns:0.95fr 1fr;
-      column-gap:36px;
+      grid-template-columns:minmax(0, 760px) minmax(320px, 420px);
+      column-gap:clamp(32px, 4vw, 72px);
+      padding:0 var(--side-pad);
       background:var(--green);
       align-items:center;
+      justify-content:start;
     }
 
     .hero-copy{
-      padding:80px var(--side-pad);
+      padding:80px 0;
       display:flex;
       flex-direction:column;
       justify-content:center;
@@ -101,7 +103,7 @@
     }
 
     .hero-copy-inner{
-      max-width:860px;
+      max-width:760px;
       margin-left:0;
     }
 
@@ -123,7 +125,7 @@
 
     .hero-copy p{
       font-size:20px;
-      max-width:700px;
+      max-width:620px;
       margin:0;
       opacity:.9;
     }
@@ -145,13 +147,14 @@
     }
 
     .hero-video-wrap{
-      width:min(420px, 88%);
+      width:100%;
+      max-width:420px;
       aspect-ratio:9 / 16;
       height:auto;
       overflow:hidden;
       background:var(--green-dark);
       align-self:center;
-      justify-self:center;
+      justify-self:start;
       margin-top:36px;
       border-radius:18px;
       box-shadow:0 24px 70px rgba(0,0,0,.22);
@@ -458,6 +461,7 @@
       .hero{
         grid-template-columns:1fr;
         column-gap:0;
+        padding:0;
       }
 
       .hero-copy{
@@ -546,10 +550,10 @@
   <div class="hero-copy">
     <div class="hero-copy-inner">
       <div class="hero-kicker">English & Korean Instruction</div>
-      <h1>Simple, focused coaching for<br>better golf.</h1>
+      <h1>Simple coaching for<br>better golf.</h1>
       <p>
-        Private golf instruction in Alexandria, Virginia for players who want clearer swing feedback,
-        smarter practice, and lasting confidence on the course.
+        Private golf instruction in Alexandria, Virginia focused on efficient swing improvement,
+        smarter practice, and lasting confidence.
       </p>
       <a class="btn" href="#contact">Book a Lesson</a>
     </div>
