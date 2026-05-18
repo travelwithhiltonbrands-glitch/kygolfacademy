@@ -144,15 +144,15 @@
 
     .hero-video-wrap{
       height:min(680px, 78vh);
-      aspect-ratio:1 / 1.15;
+      aspect-ratio:1.2 / 1;
       width:auto;
-      max-width:calc(100% - 48px);
+      max-width:calc(100% - 32px);
       overflow:hidden;
       background:var(--green-dark);
       align-self:center;
       justify-self:start;
       margin-top:36px;
-      margin-left:24px;
+      margin-left:0;
       border-radius:18px;
       box-shadow:0 24px 70px rgba(0,0,0,.22);
     }
@@ -248,9 +248,63 @@
       color:#555;
     }
 
+    /* FACILITY */
+    #facility{
+      background:var(--cream);
+    }
+
+    .facility-inner{
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .facility-intro{
+      max-width:780px;
+      color:#555;
+      margin:0 0 34px;
+      line-height:1.7;
+    }
+
+    .facility-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:24px;
+    }
+
+    .facility-card{
+      background:white;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid rgba(47,79,63,.1);
+      box-shadow:0 18px 55px rgba(31,53,42,.12);
+    }
+
+    .facility-card img{
+      width:100%;
+      height:420px;
+      object-fit:cover;
+    }
+
+    .facility-card-content{
+      padding:22px 24px 24px;
+    }
+
+    .facility-card h3{
+      color:var(--green);
+      margin:0 0 10px;
+      font-size:21px;
+      font-weight:500;
+    }
+
+    .facility-card p{
+      margin:0;
+      color:#555;
+      line-height:1.7;
+    }
+
     /* PRICING */
     #pricing{
-      background:var(--cream);
+      background:var(--soft);
     }
 
     .pricing-inner{
@@ -325,7 +379,7 @@
 
     /* LOCATION */
     #location{
-      background:var(--soft);
+      background:var(--cream);
     }
 
     .location-inner{
@@ -415,8 +469,8 @@
 
       .hero-video-wrap{
         height:auto;
-        width:min(520px, 92%);
-        aspect-ratio:1 / 1.15;
+        width:min(560px, 94%);
+        aspect-ratio:1.2 / 1;
         max-width:none;
         justify-self:center;
         margin:0 auto 48px;
@@ -424,6 +478,7 @@
 
       .about-layout,
       .lessons-grid,
+      .facility-grid,
       .pricing-grid,
       .location-grid{
         grid-template-columns:1fr;
@@ -431,6 +486,10 @@
 
       .about-photo{
         max-width:260px;
+      }
+
+      .facility-card img{
+        height:360px;
       }
     }
 
@@ -459,6 +518,10 @@
       .hero-video-wrap{
         width:min(390px, 94%);
       }
+
+      .facility-card img{
+        height:260px;
+      }
     }
   </style>
 </head>
@@ -472,6 +535,7 @@
     <nav class="main-nav">
       <a href="#about">About</a>
       <a href="#lessons">Lessons</a>
+      <a href="#facility">Facility</a>
       <a href="#pricing">Pricing</a>
       <a href="#location">Location</a>
       <a href="#contact">Contact</a>
@@ -551,6 +615,40 @@
         <p>Weekly clinics</p>
         <p>Junior instruction</p>
         <p>Small-group learning</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="facility">
+  <div class="facility-inner">
+    <h2>Indoor Practice Facility</h2>
+    <p class="facility-intro">
+      Train year-round in a comfortable indoor golf environment with spacious practice bays,
+      simulator technology, and areas designed for focused swing work and feedback.
+    </p>
+
+    <div class="facility-grid">
+      <div class="facility-card">
+        <img src="./facility-overview.jpg" alt="Indoor golf practice facility overview" />
+        <div class="facility-card-content">
+          <h3>Spacious Indoor Practice Area</h3>
+          <p>
+            A clean indoor facility with turf practice areas, hitting bays, and room for focused
+            instruction regardless of weather.
+          </p>
+        </div>
+      </div>
+
+      <div class="facility-card">
+        <img src="./trackman-bay.jpg" alt="TrackMan indoor golf simulator bay" />
+        <div class="facility-card-content">
+          <h3>Simulator & TrackMan Training</h3>
+          <p>
+            Indoor simulator sessions help students understand ball flight, club delivery,
+            carry distance, and swing patterns with clear visual feedback.
+          </p>
+        </div>
       </div>
     </div>
   </div>
