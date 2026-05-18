@@ -13,6 +13,7 @@
       --soft:#eee9dc;
       --text:#1f1f1f;
       --side-pad:clamp(24px, 5.4vw, 104px);
+      --hero-text-shift:48px;
     }
 
     *{
@@ -101,8 +102,9 @@
     }
 
     .hero-copy-inner{
-      max-width:760px;
+      max-width:820px;
       margin-left:0;
+      transform:translateX(var(--hero-text-shift));
     }
 
     .hero-kicker{
@@ -123,7 +125,7 @@
 
     .hero-copy p{
       font-size:20px;
-      max-width:620px;
+      max-width:680px;
       margin:0;
       opacity:.9;
     }
@@ -466,6 +468,7 @@
 
       .hero-copy-inner{
         margin-left:0;
+        transform:none;
       }
 
       .hero-video-wrap{
