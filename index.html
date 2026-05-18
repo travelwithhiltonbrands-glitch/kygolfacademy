@@ -12,6 +12,7 @@
       --cream:#f7f3ea;
       --soft:#eee9dc;
       --text:#1f1f1f;
+      --side-pad:clamp(24px, 5.4vw, 104px);
     }
 
     *{
@@ -45,9 +46,10 @@
     }
 
     .header-inner{
-      max-width:1200px;
-      margin:auto;
-      padding:18px 24px;
+      width:100%;
+      max-width:none;
+      margin:0;
+      padding:18px var(--side-pad);
       display:flex;
       justify-content:space-between;
       align-items:center;
@@ -85,13 +87,13 @@
       min-height:72vh;
       display:grid;
       grid-template-columns:0.95fr 1.25fr;
-      column-gap:24px;
+      column-gap:28px;
       background:var(--green);
       align-items:center;
     }
 
     .hero-copy{
-      padding:80px 64px;
+      padding:80px var(--side-pad);
       display:flex;
       flex-direction:column;
       justify-content:center;
@@ -100,7 +102,7 @@
 
     .hero-copy-inner{
       max-width:620px;
-      margin-left:auto;
+      margin-left:0;
     }
 
     .hero-kicker{
@@ -144,9 +146,8 @@
 
     .hero-video-wrap{
       height:min(680px, 78vh);
-      aspect-ratio:1.2 / 1;
+      aspect-ratio:9 / 16;
       width:auto;
-      max-width:calc(100% - 32px);
       overflow:hidden;
       background:var(--green-dark);
       align-self:center;
@@ -469,9 +470,8 @@
 
       .hero-video-wrap{
         height:auto;
-        width:min(560px, 94%);
-        aspect-ratio:1.2 / 1;
-        max-width:none;
+        width:min(420px, 88%);
+        aspect-ratio:9 / 16;
         justify-self:center;
         margin:0 auto 48px;
       }
@@ -516,7 +516,7 @@
       }
 
       .hero-video-wrap{
-        width:min(390px, 94%);
+        width:min(340px, 90%);
       }
 
       .facility-card img{
