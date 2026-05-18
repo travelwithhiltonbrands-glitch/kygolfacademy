@@ -86,16 +86,14 @@
     .hero{
       min-height:72vh;
       display:grid;
-      grid-template-columns:minmax(0, 760px) minmax(320px, 420px);
-      column-gap:clamp(32px, 4vw, 72px);
-      padding:0 var(--side-pad);
+      grid-template-columns:0.95fr 1fr;
+      column-gap:36px;
       background:var(--green);
       align-items:center;
-      justify-content:start;
     }
 
     .hero-copy{
-      padding:80px 0;
+      padding:80px var(--side-pad);
       display:flex;
       flex-direction:column;
       justify-content:center;
@@ -147,14 +145,13 @@
     }
 
     .hero-video-wrap{
-      width:100%;
-      max-width:420px;
+      width:min(420px, 88%);
       aspect-ratio:9 / 16;
       height:auto;
       overflow:hidden;
       background:var(--green-dark);
       align-self:center;
-      justify-self:start;
+      justify-self:center;
       margin-top:36px;
       border-radius:18px;
       box-shadow:0 24px 70px rgba(0,0,0,.22);
@@ -461,7 +458,6 @@
       .hero{
         grid-template-columns:1fr;
         column-gap:0;
-        padding:0;
       }
 
       .hero-copy{
@@ -552,7 +548,7 @@
       <div class="hero-kicker">English & Korean Instruction</div>
       <h1>Simple coaching for<br>better golf.</h1>
       <p>
-        Private golf instruction in Alexandria, Virginia focused on efficient swing improvement,
+        Private golf instruction in Alexandria, Virginia for players who want clearer swing feedback,
         smarter practice, and lasting confidence.
       </p>
       <a class="btn" href="#contact">Book a Lesson</a>
